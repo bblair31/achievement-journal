@@ -1,0 +1,30 @@
+{
+  "name": "achievement-journal",
+  "version": "1.0.0",
+  "description": "Automated achievement journal that collects activities from GitHub, ClickUp, and Notion",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "collect": "node src/index.js",
+    "collect:month": "node src/index.js --period month",
+    "collect:week": "node src/index.js --period week",
+    "collect:custom": "node src/index.js --start-date",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "achievement",
+    "journal",
+    "automation",
+    "career"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

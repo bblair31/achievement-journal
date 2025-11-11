@@ -3,13 +3,14 @@
 /**
  * Achievement Journal CLI
  * Collects activities from GitHub, ClickUp, and Notion
+ * Functional implementation
  */
 
 import { config as loadEnv } from 'dotenv';
-import { GitHubCollector } from './collectors/github.js';
-import { ClickUpCollector } from './collectors/clickup.js';
-import { NotionCollector } from './collectors/notion.js';
-import { MarkdownFormatter } from './formatter.js';
+import { collectGitHubActivity } from './collectors/github.js';
+import { collectClickUpActivity } from './collectors/clickup.js';
+import { collectNotionActivity } from './collectors/notion.js';
+import { generateMarkdown } from './formatter.js';
 import config from '../config.js';
 import { mkdir, writeFile } from 'fs/promises';
 import { existsSync } from 'fs';
@@ -21,8 +22,7 @@ loadEnv();
 /**
  * Parse command line arguments
  */
-function parseArgs() {
-  const args = process.argv.slice(2);
+const parseArgs = (args) => {
   const options = {
     period: null,
     startDate: null,
@@ -42,18 +42,17 @@ function parseArgs() {
         break;
       case '--help':
       case '-h':
-        showHelp();
-        process.exit(0);
+        return { showHelp: true };
     }
   }
 
   return options;
-}
+};
 
 /**
  * Show help message
  */
-function showHelp() {
+const showHelp = () => {
   console.log(`
 Achievement Journal CLI
 
@@ -74,135 +73,147 @@ Examples:
   npm run collect -- --period month
   npm run collect -- --start-date 2025-01-01 --end-date 2025-01-31
   `);
-}
+};
 
 /**
  * Calculate date range based on period
  */
-function calculateDateRange(period) {
+const calculateDateRange = (period) => {
   const endDate = new Date();
   const startDate = new Date();
 
-  switch (period) {
-    case 'week':
-      startDate.setDate(endDate.getDate() - 7);
-      break;
-    case 'month':
-      startDate.setMonth(endDate.getMonth() - 1);
-      break;
-    case 'quarter':
-      startDate.setMonth(endDate.getMonth() - 3);
-      break;
-    case 'year':
-      startDate.setFullYear(endDate.getFullYear() - 1);
-      break;
-    default:
-      startDate.setMonth(endDate.getMonth() - 1); // Default to month
-  }
+  const periodMap = {
+    week: () => startDate.setDate(endDate.getDate() - 7),
+    month: () => startDate.setMonth(endDate.getMonth() - 1),
+    quarter: () => startDate.setMonth(endDate.getMonth() - 3),
+    year: () => startDate.setFullYear(endDate.getFullYear() - 1),
+  };
+
+  const setPeriod = periodMap[period] || periodMap.month;
+  setPeriod();
 
   return { startDate, endDate };
-}
+};
 
 /**
- * Main execution function
+ * Validate required environment variables
  */
-async function main() {
-  console.log('🎯 Achievement Journal Collector\n');
+const validateEnv = () => {
+  const required = {
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+    CLICKUP_TOKEN: process.env.CLICKUP_TOKEN,
+    NOTION_TOKEN: process.env.NOTION_TOKEN,
+  };
 
-  // Parse arguments
-  const options = parseArgs();
+  const missing = Object.entries(required)
+    .filter(([_, value]) => !value)
+    .map(([key]) => key);
 
-  // Determine date range
-  let startDate, endDate;
-  if (options.startDate && options.endDate) {
-    startDate = options.startDate;
-    endDate = options.endDate;
-  } else {
-    const period = options.period || config.dateRange.defaultPeriod;
-    ({ startDate, endDate } = calculateDateRange(period));
-  }
-
-  console.log(`📅 Collecting achievements from ${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}\n`);
-
-  // Validate environment variables
-  const missingVars = [];
-  if (!process.env.GITHUB_TOKEN) missingVars.push('GITHUB_TOKEN');
-  if (!process.env.CLICKUP_TOKEN) missingVars.push('CLICKUP_TOKEN');
-  if (!process.env.NOTION_TOKEN) missingVars.push('NOTION_TOKEN');
-
-  if (missingVars.length > 0) {
-    console.error('❌ Missing required environment variables:', missingVars.join(', '));
+  if (missing.length > 0) {
+    console.error('❌ Missing required environment variables:', missing.join(', '));
     console.error('   Please create a .env file based on .env.example\n');
     process.exit(1);
   }
 
-  // Initialize collectors
-  const collectors = {
-    github: new GitHubCollector(
-      process.env.GITHUB_TOKEN,
-      config.github.username,
-      config.github
-    ),
-    clickup: new ClickUpCollector(
-      process.env.CLICKUP_TOKEN,
-      config.clickup
-    ),
-    notion: new NotionCollector(
-      process.env.NOTION_TOKEN,
-      config.notion
-    ),
-  };
+  return required;
+};
 
-  // Collect data from all sources
-  const data = {};
+/**
+ * Ensure output directory exists
+ */
+const ensureOutputDir = async (dir) => {
+  if (!existsSync(dir)) {
+    await mkdir(dir, { recursive: true });
+  }
+};
+
+/**
+ * Generate output filename with timestamp
+ */
+const generateFilename = (pattern) => {
+  const timestamp = new Date().toISOString().split('T')[0];
+  return `${pattern}-${timestamp}.md`;
+};
+
+/**
+ * Save markdown to file
+ */
+const saveMarkdown = async (outputDir, filename, markdown) => {
+  await ensureOutputDir(outputDir);
+  const filepath = path.join(outputDir, filename);
+  await writeFile(filepath, markdown, 'utf8');
+  return filepath;
+};
+
+/**
+ * Collect data from all sources
+ */
+const collectAllData = async (env, startDate, endDate) => {
+  console.log(`📅 Collecting achievements from ${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}\n`);
+
+  const [githubData, clickupData, notionData] = await Promise.all([
+    collectGitHubActivity(env.GITHUB_TOKEN, config.github.username, config.github, startDate, endDate),
+    collectClickUpActivity(env.CLICKUP_TOKEN, config.clickup, startDate, endDate),
+    collectNotionActivity(env.NOTION_TOKEN, config.notion, startDate, endDate),
+  ]);
+
+  return {
+    github: githubData,
+    clickup: clickupData,
+    notion: notionData,
+  };
+};
+
+/**
+ * Main execution function
+ */
+const main = async () => {
+  console.log('🎯 Achievement Journal Collector\n');
+
+  // Parse arguments
+  const options = parseArgs(process.argv.slice(2));
+
+  if (options.showHelp) {
+    showHelp();
+    process.exit(0);
+  }
+
+  // Determine date range
+  const { startDate, endDate } = options.startDate && options.endDate
+    ? { startDate: options.startDate, endDate: options.endDate }
+    : calculateDateRange(options.period || config.dateRange.defaultPeriod);
+
+  // Validate environment
+  const env = validateEnv();
 
   try {
-    // Run collectors in parallel
-    const [githubData, clickupData, notionData] = await Promise.all([
-      collectors.github.collect(startDate, endDate),
-      collectors.clickup.collect(startDate, endDate),
-      collectors.notion.collect(startDate, endDate),
-    ]);
-
-    data.github = githubData;
-    data.clickup = clickupData;
-    data.notion = notionData;
+    // Collect data from all sources
+    const data = await collectAllData(env, startDate, endDate);
 
     console.log('\n✅ Collection complete!\n');
+
+    // Generate markdown report
+    console.log('📝 Generating markdown report...');
+    const markdown = generateMarkdown(config.output, data, startDate, endDate);
+
+    // Save to file
+    const filename = generateFilename(config.output.filePattern);
+    const filepath = await saveMarkdown(config.output.directory, filename, markdown);
+
+    console.log(`\n✅ Report saved to: ${filepath}`);
+    console.log('\n📋 Next steps:');
+    console.log('   1. Open the generated markdown file');
+    console.log('   2. Copy the entire contents');
+    console.log('   3. Paste into Claude.ai or ChatGPT');
+    console.log('   4. Follow the instructions in the file to merge with your existing journal\n');
   } catch (error) {
     console.error('❌ Error during collection:', error.message);
     process.exit(1);
   }
-
-  // Format output
-  console.log('📝 Generating markdown report...');
-  const formatter = new MarkdownFormatter(config.output);
-  const markdown = formatter.generate(data, startDate, endDate);
-
-  // Ensure output directory exists
-  const outputDir = config.output.directory;
-  if (!existsSync(outputDir)) {
-    await mkdir(outputDir, { recursive: true });
-  }
-
-  // Generate filename with timestamp
-  const timestamp = new Date().toISOString().split('T')[0];
-  const filename = `${config.output.filePattern}-${timestamp}.md`;
-  const filepath = path.join(outputDir, filename);
-
-  // Write to file
-  await writeFile(filepath, markdown, 'utf8');
-
-  console.log(`\n✅ Report saved to: ${filepath}`);
-  console.log('\n📋 Next steps:');
-  console.log('   1. Open the generated markdown file');
-  console.log('   2. Copy the entire contents');
-  console.log('   3. Paste into Claude.ai or ChatGPT');
-  console.log('   4. Follow the instructions in the file to merge with your existing journal\n');
-}
+};
 
 // Run main function
-main().catch(error => {
+main().catch((error) => {
   console.error('Fatal error:', error);
   process.exit(1);
 });

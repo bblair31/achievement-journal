@@ -1,32 +1,27 @@
 /**
  * Markdown Formatter
  * Formats collected data into a structured markdown file with LLM prompt
+ * Functional implementation
  */
 
-export class MarkdownFormatter {
-  constructor(config) {
-    this.config = config;
-  }
+/**
+ * Format date for display
+ */
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+};
 
-  /**
-   * Format date for display
-   */
-  formatDate(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
-  }
+/**
+ * Generate the LLM prompt section
+ */
+const generatePromptSection = (startDate, endDate) => `# Achievement Collection Report
 
-  /**
-   * Generate the LLM prompt section
-   */
-  generatePromptSection(startDate, endDate) {
-    return `# Achievement Collection Report
-
-**Collection Period:** ${this.formatDate(startDate)} to ${this.formatDate(endDate)}
+**Collection Period:** ${formatDate(startDate)} to ${formatDate(endDate)}
 **Generated:** ${new Date().toLocaleString('en-US')}
 
 ---
@@ -66,255 +61,299 @@ Focus on accomplishments that would be relevant for:
 ---
 
 `;
+
+/**
+ * Group items by a key
+ */
+const groupBy = (key) => (items) =>
+  items.reduce((groups, item) => {
+    const groupKey = item[key];
+    if (!groups[groupKey]) {
+      groups[groupKey] = [];
+    }
+    groups[groupKey].push(item);
+    return groups;
+  }, {});
+
+/**
+ * Format commit line
+ */
+const formatCommitLine = (includeLinks) => (commit) => {
+  const link = includeLinks ? ` ([link](${commit.url}))` : '';
+  return `- \`${commit.sha}\` ${commit.message}${link} - ${formatDate(commit.date)}`;
+};
+
+/**
+ * Format commits section
+ */
+const formatCommits = (commits, includeLinks) => {
+  if (commits.length === 0) return '';
+
+  const commitsByRepo = groupBy('repo')(commits);
+  const lines = [`### Commits (${commits.length} total)\n`];
+
+  Object.entries(commitsByRepo).forEach(([repo, repoCommits]) => {
+    lines.push(`#### ${repo}\n`);
+    lines.push(...repoCommits.map(formatCommitLine(includeLinks)));
+    lines.push('');
+  });
+
+  return lines.join('\n');
+};
+
+/**
+ * Format pull request line
+ */
+const formatPullRequestLine = (includeLinks) => (pr) => {
+  const link = includeLinks ? ` ([link](${pr.url}))` : '';
+  const status = pr.merged_at ? '✅ merged' : pr.state === 'closed' ? '❌ closed' : '🔄 open';
+  const lines = [
+    `- #${pr.number}: ${pr.title} - ${status}${link}`,
+    `  - Created: ${formatDate(pr.created_at)}`,
+  ];
+
+  if (pr.merged_at) {
+    lines.push(`  - Merged: ${formatDate(pr.merged_at)}`);
+  } else if (pr.closed_at) {
+    lines.push(`  - Closed: ${formatDate(pr.closed_at)}`);
   }
 
-  /**
-   * Format GitHub section
-   */
-  formatGitHub(data) {
-    if (!data || (data.commits.length === 0 && data.pullRequests.length === 0 && data.issues.length === 0)) {
-      return '';
-    }
+  return lines.join('\n');
+};
 
-    let output = '## 💻 GitHub Activity\n\n';
+/**
+ * Format pull requests section
+ */
+const formatPullRequests = (pullRequests, includeLinks) => {
+  if (pullRequests.length === 0) return '';
 
-    // Commits section
-    if (data.commits.length > 0) {
-      output += `### Commits (${data.commits.length} total)\n\n`;
+  const prsByRepo = groupBy('repo')(pullRequests);
+  const lines = [`### Pull Requests (${pullRequests.length} total)\n`];
 
-      // Group commits by repo
-      const commitsByRepo = {};
-      data.commits.forEach(commit => {
-        if (!commitsByRepo[commit.repo]) {
-          commitsByRepo[commit.repo] = [];
-        }
-        commitsByRepo[commit.repo].push(commit);
-      });
+  Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
+    lines.push(`#### ${repo}\n`);
+    lines.push(...repoPRs.map(formatPullRequestLine(includeLinks)));
+    lines.push('');
+  });
 
-      // Output by repo
-      for (const [repo, commits] of Object.entries(commitsByRepo)) {
-        output += `#### ${repo}\n\n`;
-        commits.forEach(commit => {
-          const link = this.config.includeLinks ? ` ([link](${commit.url}))` : '';
-          output += `- \`${commit.sha}\` ${commit.message}${link} - ${this.formatDate(commit.date)}\n`;
-        });
-        output += '\n';
-      }
-    }
+  return lines.join('\n');
+};
 
-    // Pull Requests section
-    if (data.pullRequests.length > 0) {
-      output += `### Pull Requests (${data.pullRequests.length} total)\n\n`;
+/**
+ * Format issue line
+ */
+const formatIssueLine = (includeLinks) => (issue) => {
+  const link = includeLinks ? ` ([link](${issue.url}))` : '';
+  const status = issue.state === 'closed' ? '✅ closed' : '🔄 open';
+  const lines = [
+    `- #${issue.number}: ${issue.title} - ${status}${link}`,
+    `  - Created: ${formatDate(issue.created_at)}`,
+  ];
 
-      // Group by repo
-      const prsByRepo = {};
-      data.pullRequests.forEach(pr => {
-        if (!prsByRepo[pr.repo]) {
-          prsByRepo[pr.repo] = [];
-        }
-        prsByRepo[pr.repo].push(pr);
-      });
-
-      for (const [repo, prs] of Object.entries(prsByRepo)) {
-        output += `#### ${repo}\n\n`;
-        prs.forEach(pr => {
-          const link = this.config.includeLinks ? ` ([link](${pr.url}))` : '';
-          const status = pr.merged_at ? '✅ merged' : pr.state === 'closed' ? '❌ closed' : '🔄 open';
-          output += `- #${pr.number}: ${pr.title} - ${status}${link}\n`;
-          output += `  - Created: ${this.formatDate(pr.created_at)}\n`;
-          if (pr.merged_at) {
-            output += `  - Merged: ${this.formatDate(pr.merged_at)}\n`;
-          } else if (pr.closed_at) {
-            output += `  - Closed: ${this.formatDate(pr.closed_at)}\n`;
-          }
-        });
-        output += '\n';
-      }
-    }
-
-    // Issues section
-    if (data.issues.length > 0) {
-      output += `### Issues Created (${data.issues.length} total)\n\n`;
-
-      // Group by repo
-      const issuesByRepo = {};
-      data.issues.forEach(issue => {
-        if (!issuesByRepo[issue.repo]) {
-          issuesByRepo[issue.repo] = [];
-        }
-        issuesByRepo[issue.repo].push(issue);
-      });
-
-      for (const [repo, issues] of Object.entries(issuesByRepo)) {
-        output += `#### ${repo}\n\n`;
-        issues.forEach(issue => {
-          const link = this.config.includeLinks ? ` ([link](${issue.url}))` : '';
-          const status = issue.state === 'closed' ? '✅ closed' : '🔄 open';
-          output += `- #${issue.number}: ${issue.title} - ${status}${link}\n`;
-          output += `  - Created: ${this.formatDate(issue.created_at)}\n`;
-          if (issue.closed_at) {
-            output += `  - Closed: ${this.formatDate(issue.closed_at)}\n`;
-          }
-        });
-        output += '\n';
-      }
-    }
-
-    return output;
+  if (issue.closed_at) {
+    lines.push(`  - Closed: ${formatDate(issue.closed_at)}`);
   }
 
-  /**
-   * Format ClickUp section
-   */
-  formatClickUp(data) {
-    if (!data || data.tasks.length === 0) {
-      return '';
-    }
+  return lines.join('\n');
+};
 
-    let output = `## ✅ ClickUp Tasks (${data.tasks.length} total)\n\n`;
+/**
+ * Format issues section
+ */
+const formatIssues = (issues, includeLinks) => {
+  if (issues.length === 0) return '';
 
-    // Group by status
-    const tasksByStatus = {};
-    data.tasks.forEach(task => {
-      const status = task.status || 'No Status';
-      if (!tasksByStatus[status]) {
-        tasksByStatus[status] = [];
-      }
-      tasksByStatus[status].push(task);
-    });
+  const issuesByRepo = groupBy('repo')(issues);
+  const lines = [`### Issues Created (${issues.length} total)\n`];
 
-    // Output by status
-    for (const [status, tasks] of Object.entries(tasksByStatus)) {
-      output += `### ${status} (${tasks.length})\n\n`;
+  Object.entries(issuesByRepo).forEach(([repo, repoIssues]) => {
+    lines.push(`#### ${repo}\n`);
+    lines.push(...repoIssues.map(formatIssueLine(includeLinks)));
+    lines.push('');
+  });
 
-      tasks.forEach(task => {
-        const link = this.config.includeLinks ? ` ([link](${task.url}))` : '';
-        output += `#### ${task.name}${link}\n\n`;
+  return lines.join('\n');
+};
 
-        if (task.space) output += `- **Space:** ${task.space}\n`;
-        if (task.folder) output += `- **Folder:** ${task.folder}\n`;
-        if (task.list) output += `- **List:** ${task.list}\n`;
-        if (task.priority && task.priority !== 'none') output += `- **Priority:** ${task.priority}\n`;
-        if (task.tags && task.tags.length > 0) output += `- **Tags:** ${task.tags.join(', ')}\n`;
-
-        output += `- **Created:** ${this.formatDate(task.date_created)}\n`;
-        output += `- **Updated:** ${this.formatDate(task.date_updated)}\n`;
-
-        if (task.date_closed) {
-          output += `- **Closed:** ${this.formatDate(task.date_closed)}\n`;
-        }
-
-        if (task.due_date) {
-          output += `- **Due:** ${this.formatDate(task.due_date)}\n`;
-        }
-
-        if (task.time_estimate || task.time_spent) {
-          const estimate = task.time_estimate ? `${Math.round(task.time_estimate / 3600000)}h` : 'none';
-          const spent = task.time_spent ? `${Math.round(task.time_spent / 3600000)}h` : '0h';
-          output += `- **Time:** ${spent} spent / ${estimate} estimated\n`;
-        }
-
-        if (task.description) {
-          output += `\n${task.description}\n`;
-        }
-
-        output += '\n';
-      });
-    }
-
-    return output;
+/**
+ * Format GitHub section
+ */
+const formatGitHub = (config) => (data) => {
+  if (!data || (data.commits.length === 0 && data.pullRequests.length === 0 && data.issues.length === 0)) {
+    return '';
   }
 
-  /**
-   * Format Notion section
-   */
-  formatNotion(data) {
-    if (!data || data.pages.length === 0) {
-      return '';
-    }
+  const sections = [
+    '## 💻 GitHub Activity\n',
+    formatCommits(data.commits, config.includeLinks),
+    formatPullRequests(data.pullRequests, config.includeLinks),
+    formatIssues(data.issues, config.includeLinks),
+  ];
 
-    let output = `## 📝 Notion Pages (${data.pages.length} total)\n\n`;
+  return sections.filter(Boolean).join('\n');
+};
 
-    // Group by database (if applicable)
-    const pagesByDatabase = { 'Standalone Pages': [] };
-    data.pages.forEach(page => {
-      const db = page.database || 'Standalone Pages';
-      if (!pagesByDatabase[db]) {
-        pagesByDatabase[db] = [];
-      }
-      pagesByDatabase[db].push(page);
-    });
+/**
+ * Format task details
+ */
+const formatTaskDetails = (task) => {
+  const details = [];
 
-    // Output by database/category
-    for (const [dbName, pages] of Object.entries(pagesByDatabase)) {
-      if (pages.length === 0) continue;
+  if (task.space) details.push(`- **Space:** ${task.space}`);
+  if (task.folder) details.push(`- **Folder:** ${task.folder}`);
+  if (task.list) details.push(`- **List:** ${task.list}`);
+  if (task.priority && task.priority !== 'none') details.push(`- **Priority:** ${task.priority}`);
+  if (task.tags?.length > 0) details.push(`- **Tags:** ${task.tags.join(', ')}`);
 
-      output += `### ${dbName} (${pages.length})\n\n`;
+  details.push(`- **Created:** ${formatDate(task.date_created)}`);
+  details.push(`- **Updated:** ${formatDate(task.date_updated)}`);
 
-      pages.forEach(page => {
-        const link = this.config.includeLinks ? ` ([link](${page.url}))` : '';
-        output += `#### ${page.title}${link}\n\n`;
-        output += `- **Created:** ${this.formatDate(page.created_time)}\n`;
-        output += `- **Last Edited:** ${this.formatDate(page.last_edited_time)}\n`;
-        output += '\n';
-      });
-    }
-
-    return output;
+  if (task.date_closed) {
+    details.push(`- **Closed:** ${formatDate(task.date_closed)}`);
   }
 
-  /**
-   * Generate summary statistics
-   */
-  generateSummary(github, clickup, notion) {
-    let output = '## 📊 Summary Statistics\n\n';
-
-    if (github) {
-      output += `- **GitHub Commits:** ${github.commits.length}\n`;
-      output += `- **Pull Requests:** ${github.pullRequests.length}\n`;
-      output += `- **Issues Created:** ${github.issues.length}\n`;
-    }
-
-    if (clickup) {
-      output += `- **ClickUp Tasks:** ${clickup.tasks.length}\n`;
-    }
-
-    if (notion) {
-      output += `- **Notion Pages:** ${notion.pages.length}\n`;
-    }
-
-    output += '\n---\n\n';
-
-    return output;
+  if (task.due_date) {
+    details.push(`- **Due:** ${formatDate(task.due_date)}`);
   }
 
-  /**
-   * Generate complete markdown document
-   */
-  generate(data, startDate, endDate) {
-    let output = '';
-
-    // Add prompt section
-    output += this.generatePromptSection(startDate, endDate);
-
-    // Add summary
-    output += this.generateSummary(data.github, data.clickup, data.notion);
-
-    // Add each section
-    output += this.formatGitHub(data.github);
-    output += this.formatClickUp(data.clickup);
-    output += this.formatNotion(data.notion);
-
-    // Add footer
-    output += '---\n\n';
-    output += '*End of Achievement Collection Report*\n';
-    output += '\n**Next Steps:**\n';
-    output += '1. Copy this entire document\n';
-    output += '2. Open Claude.ai or ChatGPT\n';
-    output += '3. Paste this document along with your existing journal\n';
-    output += '4. Use the suggested prompt above to merge and summarize\n';
-    output += '5. Save the updated journal\n';
-
-    return output;
+  if (task.time_estimate || task.time_spent) {
+    const estimate = task.time_estimate ? `${Math.round(task.time_estimate / 3600000)}h` : 'none';
+    const spent = task.time_spent ? `${Math.round(task.time_spent / 3600000)}h` : '0h';
+    details.push(`- **Time:** ${spent} spent / ${estimate} estimated`);
   }
-}
+
+  return details.join('\n');
+};
+
+/**
+ * Format single task
+ */
+const formatTask = (includeLinks) => (task) => {
+  const link = includeLinks ? ` ([link](${task.url}))` : '';
+  const lines = [
+    `#### ${task.name}${link}\n`,
+    formatTaskDetails(task),
+  ];
+
+  if (task.description) {
+    lines.push(`\n${task.description}`);
+  }
+
+  return lines.join('\n') + '\n';
+};
+
+/**
+ * Format ClickUp section
+ */
+const formatClickUp = (config) => (data) => {
+  if (!data || data.tasks.length === 0) {
+    return '';
+  }
+
+  const tasksByStatus = groupBy('status')(data.tasks);
+  const lines = [`## ✅ ClickUp Tasks (${data.tasks.length} total)\n`];
+
+  Object.entries(tasksByStatus).forEach(([status, statusTasks]) => {
+    lines.push(`### ${status} (${statusTasks.length})\n`);
+    lines.push(...statusTasks.map(formatTask(config.includeLinks)));
+  });
+
+  return lines.join('\n');
+};
+
+/**
+ * Format single Notion page
+ */
+const formatNotionPage = (includeLinks) => (page) => {
+  const link = includeLinks ? ` ([link](${page.url}))` : '';
+  return [
+    `#### ${page.title}${link}\n`,
+    `- **Created:** ${formatDate(page.created_time)}`,
+    `- **Last Edited:** ${formatDate(page.last_edited_time)}\n`,
+  ].join('\n');
+};
+
+/**
+ * Format Notion section
+ */
+const formatNotion = (config) => (data) => {
+  if (!data || data.pages.length === 0) {
+    return '';
+  }
+
+  // Group by database or standalone
+  const pagesByDatabase = data.pages.reduce((groups, page) => {
+    const db = page.database || 'Standalone Pages';
+    if (!groups[db]) {
+      groups[db] = [];
+    }
+    groups[db].push(page);
+    return groups;
+  }, {});
+
+  const lines = [`## 📝 Notion Pages (${data.pages.length} total)\n`];
+
+  Object.entries(pagesByDatabase).forEach(([dbName, dbPages]) => {
+    if (dbPages.length === 0) return;
+    lines.push(`### ${dbName} (${dbPages.length})\n`);
+    lines.push(...dbPages.map(formatNotionPage(config.includeLinks)));
+  });
+
+  return lines.join('\n');
+};
+
+/**
+ * Generate summary statistics
+ */
+const generateSummary = (github, clickup, notion) => {
+  const lines = ['## 📊 Summary Statistics\n'];
+
+  if (github) {
+    lines.push(`- **GitHub Commits:** ${github.commits.length}`);
+    lines.push(`- **Pull Requests:** ${github.pullRequests.length}`);
+    lines.push(`- **Issues Created:** ${github.issues.length}`);
+  }
+
+  if (clickup) {
+    lines.push(`- **ClickUp Tasks:** ${clickup.tasks.length}`);
+  }
+
+  if (notion) {
+    lines.push(`- **Notion Pages:** ${notion.pages.length}`);
+  }
+
+  lines.push('\n---\n');
+
+  return lines.join('\n');
+};
+
+/**
+ * Generate footer
+ */
+const generateFooter = () => `---
+
+*End of Achievement Collection Report*
+
+**Next Steps:**
+1. Copy this entire document
+2. Open Claude.ai or ChatGPT
+3. Paste this document along with your existing journal
+4. Use the suggested prompt above to merge and summarize
+5. Save the updated journal
+`;
+
+/**
+ * Generate complete markdown document
+ */
+export const generateMarkdown = (config, data, startDate, endDate) => {
+  const sections = [
+    generatePromptSection(startDate, endDate),
+    generateSummary(data.github, data.clickup, data.notion),
+    formatGitHub(config)(data.github),
+    formatClickUp(config)(data.clickup),
+    formatNotion(config)(data.notion),
+    generateFooter(),
+  ];
+
+  return sections.filter(Boolean).join('\n');
+};

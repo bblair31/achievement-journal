@@ -70,6 +70,19 @@ const fetchSpecificRepos = async (request, repoNames) => {
 };
 
 /**
+ * Filter repos by organization
+ */
+const filterReposByOrg = (repos, orgs) => {
+  if (!orgs || orgs.length === 0) return repos;
+
+  const orgSet = new Set(orgs.map(org => org.toLowerCase()));
+  return repos.filter(repo => {
+    const repoOrg = repo.owner?.login?.toLowerCase();
+    return repoOrg && orgSet.has(repoOrg);
+  });
+};
+
+/**
  * Get all repositories for the user
  */
 const getRepositories = async (request, config) => {
@@ -78,11 +91,20 @@ const getRepositories = async (request, config) => {
     return fetchSpecificRepos(request, config.repos);
   }
 
-  // Otherwise, fetch all accessible repos
-  return fetchPaginated(request, '/user/repos', {
+  // Fetch all accessible repos
+  const allRepos = await fetchPaginated(request, '/user/repos', {
     affiliation: 'owner,collaborator,organization_member',
     sort: 'updated',
   });
+
+  // Filter by org if specified
+  if (config.orgs?.length > 0) {
+    const filtered = filterReposByOrg(allRepos, config.orgs);
+    console.log(`   Filtered to ${filtered.length} repos from orgs: ${config.orgs.join(', ')}`);
+    return filtered;
+  }
+
+  return allRepos;
 };
 
 /**
@@ -153,10 +175,17 @@ const fetchPullRequestDetails = async (request, repo, prNumber) => {
 /**
  * Get pull requests created by user with full details
  */
-const getPullRequests = async (request, username, startDate, endDate) => {
+const getPullRequests = async (request, username, startDate, endDate, config) => {
   try {
     const dateRange = `${startDate.toISOString().split('T')[0]}..${endDate.toISOString().split('T')[0]}`;
-    const query = `author:${username} type:pr created:${dateRange}`;
+
+    // Build query with optional org filter
+    let query = `author:${username} type:pr created:${dateRange}`;
+    if (config.orgs?.length > 0) {
+      const orgFilters = config.orgs.map(org => `org:${org}`).join(' ');
+      query = `${query} ${orgFilters}`;
+    }
+
     const result = await request('/search/issues', { q: query, per_page: 100 });
 
     console.log(`   Fetching details for ${result.items.length} PRs...`);
@@ -191,10 +220,16 @@ const formatIssue = (issue) => ({
 /**
  * Get issues created by user
  */
-const getIssues = async (request, username, startDate, endDate) => {
+const getIssues = async (request, username, startDate, endDate, config) => {
   try {
     const dateRange = `${startDate.toISOString().split('T')[0]}..${endDate.toISOString().split('T')[0]}`;
-    const query = `author:${username} type:issue created:${dateRange}`;
+
+    // Build query with optional org filter
+    let query = `author:${username} type:issue created:${dateRange}`;
+    if (config.orgs?.length > 0) {
+      const orgFilters = config.orgs.map(org => `org:${org}`).join(' ');
+      query = `${query} ${orgFilters}`;
+    }
     const result = await request('/search/issues', { q: query, per_page: 100 });
 
     return result.items.map(formatIssue);
@@ -223,8 +258,8 @@ export const collectGitHubActivity = async (token, username, config, startDate, 
 
   // Collect PRs and issues in parallel
   const [pullRequests, issues] = await Promise.all([
-    getPullRequests(request, username, startDate, endDate),
-    getIssues(request, username, startDate, endDate),
+    getPullRequests(request, username, startDate, endDate, config),
+    getIssues(request, username, startDate, endDate, config),
   ]);
 
   console.log(`   ✓ ${commits.length} commits`);

@@ -13,6 +13,10 @@ export default {
     // Example: ['owner/repo1', 'owner/repo2']
     repos: [],
 
+    // Only include repos from these organizations (leave empty for all)
+    // Example: ['my-company', 'my-other-org']
+    orgs: ['WorkUp-Health'],
+
     // Include private repositories
     includePrivate: true,
 

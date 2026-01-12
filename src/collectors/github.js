@@ -88,13 +88,22 @@ const getRepositories = async (request, config) => {
 /**
  * Format a commit object
  */
-const formatCommit = (repo) => (commit) => ({
-  repo: repo.full_name,
-  sha: commit.sha.substring(0, 7),
-  message: commit.commit.message.split('\n')[0],
-  date: commit.commit.author.date,
-  url: commit.html_url,
-});
+const formatCommit = (repo) => (commit) => {
+  const fullMessage = commit.commit.message;
+  const lines = fullMessage.split('\n');
+  const title = lines[0];
+  // Get body (everything after first line, trimmed)
+  const body = lines.slice(1).join('\n').trim();
+
+  return {
+    repo: repo.full_name,
+    sha: commit.sha.substring(0, 7),
+    title,
+    body,
+    date: commit.commit.author.date,
+    url: commit.html_url,
+  };
+};
 
 /**
  * Get commits for a single repository
@@ -116,21 +125,33 @@ const getCommitsForRepo = async (request, username, startDate, endDate, repo) =>
 };
 
 /**
- * Format a pull request from search results
+ * Fetch full PR details including description and stats
  */
-const formatPullRequest = (pr) => ({
-  repo: pr.repository_url.split('/').slice(-2).join('/'),
-  number: pr.number,
-  title: pr.title,
-  state: pr.state,
-  created_at: pr.created_at,
-  closed_at: pr.closed_at,
-  merged_at: pr.pull_request?.merged_at,
-  url: pr.html_url,
-});
+const fetchPullRequestDetails = async (request, repo, prNumber) => {
+  try {
+    const pr = await request(`/repos/${repo}/pulls/${prNumber}`);
+    return {
+      repo,
+      number: pr.number,
+      title: pr.title,
+      body: pr.body || '',
+      state: pr.state,
+      created_at: pr.created_at,
+      closed_at: pr.closed_at,
+      merged_at: pr.merged_at,
+      url: pr.html_url,
+      additions: pr.additions,
+      deletions: pr.deletions,
+      changed_files: pr.changed_files,
+    };
+  } catch (error) {
+    console.error(`Failed to fetch PR #${prNumber} from ${repo}:`, error.message);
+    return null;
+  }
+};
 
 /**
- * Get pull requests created by user
+ * Get pull requests created by user with full details
  */
 const getPullRequests = async (request, username, startDate, endDate) => {
   try {
@@ -138,7 +159,16 @@ const getPullRequests = async (request, username, startDate, endDate) => {
     const query = `author:${username} type:pr created:${dateRange}`;
     const result = await request('/search/issues', { q: query, per_page: 100 });
 
-    return result.items.map(formatPullRequest);
+    console.log(`   Fetching details for ${result.items.length} PRs...`);
+
+    // Fetch full details for each PR
+    const prDetailsPromises = result.items.map((pr) => {
+      const repo = pr.repository_url.split('/').slice(-2).join('/');
+      return fetchPullRequestDetails(request, repo, pr.number);
+    });
+
+    const prDetails = await Promise.all(prDetailsPromises);
+    return prDetails.filter(Boolean);
   } catch (error) {
     console.error('Failed to fetch pull requests:', error.message);
     return [];

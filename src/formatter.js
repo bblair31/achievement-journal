@@ -6,9 +6,20 @@
 
 /**
  * Format date for display
+ * Handles ISO strings, Unix timestamps (ms), and null/undefined
  */
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
+const formatDate = (dateValue) => {
+  if (!dateValue) return null;
+
+  // Handle Unix timestamps in milliseconds (ClickUp returns these as strings)
+  const timestamp = typeof dateValue === 'string' && /^\d+$/.test(dateValue)
+    ? parseInt(dateValue, 10)
+    : dateValue;
+
+  const date = new Date(timestamp);
+
+  if (isNaN(date.getTime())) return null;
+
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
@@ -76,11 +87,19 @@ const groupBy = (key) => (items) =>
   }, {});
 
 /**
- * Format commit line
+ * Format commit entry
  */
-const formatCommitLine = (includeLinks) => (commit) => {
+const formatCommitEntry = (includeLinks) => (commit) => {
   const link = includeLinks ? ` ([link](${commit.url}))` : '';
-  return `- \`${commit.sha}\` ${commit.message}${link} - ${formatDate(commit.date)}`;
+  const lines = [`- \`${commit.sha}\` ${commit.title}${link} - ${formatDate(commit.date)}`];
+
+  if (commit.body) {
+    // Indent the body and add it
+    const indentedBody = commit.body.split('\n').map(line => `  ${line}`).join('\n');
+    lines.push(indentedBody);
+  }
+
+  return lines.join('\n');
 };
 
 /**
@@ -94,7 +113,7 @@ const formatCommits = (commits, includeLinks) => {
 
   Object.entries(commitsByRepo).forEach(([repo, repoCommits]) => {
     lines.push(`#### ${repo}\n`);
-    lines.push(...repoCommits.map(formatCommitLine(includeLinks)));
+    lines.push(...repoCommits.map(formatCommitEntry(includeLinks)));
     lines.push('');
   });
 
@@ -102,23 +121,34 @@ const formatCommits = (commits, includeLinks) => {
 };
 
 /**
- * Format pull request line
+ * Format pull request entry with full details
  */
-const formatPullRequestLine = (includeLinks) => (pr) => {
+const formatPullRequestEntry = (includeLinks) => (pr) => {
   const link = includeLinks ? ` ([link](${pr.url}))` : '';
   const status = pr.merged_at ? '✅ merged' : pr.state === 'closed' ? '❌ closed' : '🔄 open';
   const lines = [
-    `- #${pr.number}: ${pr.title} - ${status}${link}`,
-    `  - Created: ${formatDate(pr.created_at)}`,
+    `#### #${pr.number}: ${pr.title} - ${status}${link}\n`,
   ];
 
-  if (pr.merged_at) {
-    lines.push(`  - Merged: ${formatDate(pr.merged_at)}`);
-  } else if (pr.closed_at) {
-    lines.push(`  - Closed: ${formatDate(pr.closed_at)}`);
+  // Add stats if available
+  if (pr.changed_files !== undefined) {
+    lines.push(`- **Changes:** ${pr.changed_files} files (+${pr.additions} / -${pr.deletions})`);
   }
 
-  return lines.join('\n');
+  lines.push(`- **Created:** ${formatDate(pr.created_at)}`);
+
+  if (pr.merged_at) {
+    lines.push(`- **Merged:** ${formatDate(pr.merged_at)}`);
+  } else if (pr.closed_at) {
+    lines.push(`- **Closed:** ${formatDate(pr.closed_at)}`);
+  }
+
+  // Add description if present
+  if (pr.body && pr.body.trim()) {
+    lines.push(`\n**Description:**\n${pr.body}`);
+  }
+
+  return lines.join('\n') + '\n';
 };
 
 /**
@@ -131,9 +161,8 @@ const formatPullRequests = (pullRequests, includeLinks) => {
   const lines = [`### Pull Requests (${pullRequests.length} total)\n`];
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
-    lines.push(`#### ${repo}\n`);
-    lines.push(...repoPRs.map(formatPullRequestLine(includeLinks)));
-    lines.push('');
+    lines.push(`### ${repo}\n`);
+    lines.push(...repoPRs.map(formatPullRequestEntry(includeLinks)));
   });
 
   return lines.join('\n');
@@ -199,22 +228,20 @@ const formatGitHub = (config) => (data) => {
 const formatTaskDetails = (task) => {
   const details = [];
 
-  if (task.space) details.push(`- **Space:** ${task.space}`);
   if (task.folder) details.push(`- **Folder:** ${task.folder}`);
   if (task.list) details.push(`- **List:** ${task.list}`);
   if (task.priority && task.priority !== 'none') details.push(`- **Priority:** ${task.priority}`);
   if (task.tags?.length > 0) details.push(`- **Tags:** ${task.tags.join(', ')}`);
 
-  details.push(`- **Created:** ${formatDate(task.date_created)}`);
-  details.push(`- **Updated:** ${formatDate(task.date_updated)}`);
+  const createdDate = formatDate(task.date_created);
+  const updatedDate = formatDate(task.date_updated);
+  const closedDate = formatDate(task.date_closed);
+  const dueDate = formatDate(task.due_date);
 
-  if (task.date_closed) {
-    details.push(`- **Closed:** ${formatDate(task.date_closed)}`);
-  }
-
-  if (task.due_date) {
-    details.push(`- **Due:** ${formatDate(task.due_date)}`);
-  }
+  if (createdDate) details.push(`- **Created:** ${createdDate}`);
+  if (updatedDate) details.push(`- **Updated:** ${updatedDate}`);
+  if (closedDate) details.push(`- **Closed:** ${closedDate}`);
+  if (dueDate) details.push(`- **Due:** ${dueDate}`);
 
   if (task.time_estimate || task.time_spent) {
     const estimate = task.time_estimate ? `${Math.round(task.time_estimate / 3600000)}h` : 'none';

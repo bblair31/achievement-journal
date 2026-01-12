@@ -4,8 +4,7 @@ node_modules/
 # Environment variables
 .env
 
-# Output files
-output/
+# Log files
 *.log
 
 # OS files

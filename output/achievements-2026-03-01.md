@@ -1,0 +1,1130 @@
+# Achievement Collection Report
+
+**Collection Period:** Feb 1, 2026 to Mar 1, 2026
+**Generated:** 3/1/2026, 9:31:41 AM
+
+---
+
+## 🤖 Instructions for LLM Processing
+
+**Copy this entire document and paste it into Claude.ai or ChatGPT along with your existing achievement journal/brag document.**
+
+### Suggested Prompt:
+
+```
+I have two documents:
+1. My existing achievement journal (paste your current journal below)
+2. Raw activity data from the past period (this document)
+
+Please help me:
+- Review the raw activities and identify significant accomplishments
+- Group related activities into broader achievements
+- Merge these new achievements into my existing journal
+- Update any ongoing projects that have made progress
+- Maintain chronological order and consistent formatting
+- Highlight any particularly impressive or career-significant items
+
+For each achievement, provide:
+- Clear, results-oriented description
+- Context about the impact or importance
+- Relevant technical details or metrics
+- Date or time period
+
+Focus on accomplishments that would be relevant for:
+- Performance reviews
+- Resume updates
+- Job interviews
+- Promotion discussions
+```
+
+---
+
+
+## 📊 Summary Statistics
+
+- **GitHub Commits:** 211
+- **Pull Requests:** 39
+- **Issues Created:** 0
+- **ClickUp Tasks:** 17
+- **Notion Pages:** 0
+
+---
+
+## 💻 GitHub Activity
+
+### Commits (211 total)
+
+#### WorkUp-Health/WorkUp-Admin-Platform
+
+- `7847c76` Merge pull request #516 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/7847c764e05cef1bb3e93e80187de436d10919b1)) - Feb 26, 2026
+  2026-02-26 - Dev -> Staging
+- `30613f5` Merge pull request #520 from WorkUp-Health/f/precheckCandidates ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/30613f5031da229bfe25f8af46e4b12242f97afb)) - Feb 26, 2026
+  add prechecked candidates functionality
+- `f1d6fc4` Merge pull request #521 from WorkUp-Health/f/updateDefaultFilters ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/f1d6fc43bfa5b910f7c3f79050f7af5f5d13280a)) - Feb 26, 2026
+  Update default filters for rediscovery and a few small tweaks
+- `5b3c88c` Fix icons test ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/5b3c88c8f090443fda522295badeb09508efbb71)) - Feb 26, 2026
+- `33a17f0` Update default filters for rediscovery and a few small tweaks ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/33a17f0c9f8bcc1cf81ba3d934f6372883593cb6)) - Feb 26, 2026
+- `c4131c7` Merge pull request #518 from WorkUp-Health/f/rediscoveryMetrics ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/c4131c7f50bdef16b801b1ad8cc04c71f7458e8a)) - Feb 26, 2026
+  Add top metrics bar for Rediscovery
+- `48d6638` Add top metrics bar for Rediscovery ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/48d6638cafe955267d9b8b0beaac6ba81e131dfd)) - Feb 26, 2026
+- `2ed480d` Add metrics to each opportunity card in rediscovery ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/2ed480d6212255261a00ccacfcf8ea6bdbe0e780)) - Feb 26, 2026
+- `3196e7e` Merge pull request #513 from WorkUp-Health/f/mergePriorityAndRediscovery ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/3196e7ee7c5107a32e150a79f960ab06a130200b)) - Feb 26, 2026
+  Make Rediscovery view behave more like Priority View
+- `0ec8a26` REvert accidental push ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/0ec8a26c019162a3d57860e67bc9270ec6685221)) - Feb 26, 2026
+- `d65e866` Remove now-unused functions ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/d65e86686bf3afcbffd8d04d0f51308ae275cd49)) - Feb 26, 2026
+- `e9ce8b9` PR feedback ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/e9ce8b96c63b89f3e66430cd2713d3f9c651a30a)) - Feb 26, 2026
+- `f8c6cba` Make Rediscovery view behave more like Priority View ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/f8c6cbaa9deb37a4137579b361da6c61e8f04b8d)) - Feb 26, 2026
+- `0e980df` Merge pull request #508 from WorkUp-Health/dependabot/npm_and_yarn/minimatch-3.1.4 ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/0e980df0c14edb5f3ab921814236fbb22e1f94a8)) - Feb 25, 2026
+  Bump minimatch from 3.1.2 to 3.1.4
+- `f5e9cb1` Revert match score filter to Integer ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/f5e9cb13d968f2630b29e905908ba5d55499725a)) - Feb 24, 2026
+- `069f8a2` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/069f8a2f4bf4f3db094a272dedcf60f1ef4d8af4)) - Feb 24, 2026
+- `ede5de7` Merge pull request #505 from WorkUp-Health/h/fixScoreFilter ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/ede5de7b24eac48fe2cff5a52f054c9651585708)) - Feb 24, 2026
+  HOTFIX: Fix match score filter back to integer from single select
+- `20f6149` Fix match score filter back to integer from single select ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/20f6149d6f929c5469000e5008503f653df51fe8)) - Feb 24, 2026
+- `0f6e039` Merge pull request #500 from WorkUp-Health/f/matchingUpdates ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/0f6e039102cc74ddf0762017d68290054965f94d)) - Feb 23, 2026
+  Matching updates for new filtering approach
+- `7356bb3` Update tests for new default filters and score threshold alignment ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/7356bb3708f4c714d0e51633901072c55b254059)) - Feb 23, 2026
+  RoleCard: expect 5 filter items (added candidateStatus exclusions), operator 'is' and value 6.3.
+  Page: expect 4 default filter items (added recentCommunication exclusion).
+- `42f9468` Fix PV RoleCard filters to use filterConfigs operator and value ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/42f94683b03135bc4d35812b02bd53cc4bed0277)) - Feb 23, 2026
+  TO_REVIEW_FILTERS overallScore changed from >= / 7 to is / 6.3 to align
+  with FilterSummaryCard system and Rediscovery filterConfigs valueOptions.
+- `3dd29ca` Add default Rediscovery filters to exclude NI and TRE candidates ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/3dd29ca9f7eaccba8102e8132b2d0cae74c1f9e1)) - Feb 23, 2026
+  New opportunities default to filtering out "Not Interested" and "Took
+  Role Elsewhere" candidates. Existing localStorage filters unaffected.
+- `de851b6` Merge pull request #492 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/de851b6a8662e214a57961d98bac8b86af6dc8eb)) - Feb 19, 2026
+  2026-02-19 - Dev -> Staging
+- `510f159` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/510f159376d4ebd557261a35101e67701982778c)) - Feb 19, 2026
+- `edd67a5` Merge pull request #491 from WorkUp-Health/staging ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/edd67a54bf3cbff65e47c6d1dc726e868ff5e164)) - Feb 19, 2026
+  2026-02-19 - Release
+- `053853c` Merge pull request #490 from WorkUp-Health/dependabot/npm_and_yarn/fast-xml-parser-5.3.6 ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/053853c62b242d68805c0751a2d256ae679c2f8d)) - Feb 19, 2026
+  Bump fast-xml-parser from 5.3.4 to 5.3.6
+- `eeaa117` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/eeaa117181cd774421fb4deaf39870da9401836b)) - Feb 19, 2026
+- `0855ab3` Add all filter options for Candidate Status into Rediscovery filter ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/0855ab31e801484879e2f7bec2a75da6d4325d55)) - Feb 19, 2026
+- `36ab522` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/36ab52219b90894df127e1ff1666ef649e69ad44)) - Feb 18, 2026
+- `e18ff08` Timezone fix for recent activity ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/e18ff0866133001f4d51343283dec8ddcea88b17)) - Feb 18, 2026
+- `5736a3a` Merge pull request #488 from WorkUp-Health/f/candidateStatusFilters ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/5736a3a2a6faf60de0e6d62206dca8898112928f)) - Feb 13, 2026
+  Add candidate status filters
+- `c6d4d92` Merge branch 'dev' into f/candidateStatusFilters ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/c6d4d9262d886aaf27fdbb04ec7d50da0437eb60)) - Feb 12, 2026
+- `de9532d` Fix match summary lint error ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/de9532d71cf0bcdde5b75fe4bf0ab79a045f6414)) - Feb 12, 2026
+- `70e0db2` Fix test ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/70e0db29ead1703645af2f8190bb4cfd38baadf7)) - Feb 12, 2026
+- `07708d1` Merge branch 'dev' into f/candidateStatusFilters ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/07708d116843c58d7ffeacf6d002626e34a7be0c)) - Feb 12, 2026
+- `311f31e` Fix match summary with constants scores that never updated ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/311f31ed83447b65e6f7c81de0694e66dfe3cbfd)) - Feb 12, 2026
+- `5fe6803` Hide direct filter in MUI table ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/5fe68030ae5c48069a05debf87b115a9ed14b106)) - Feb 12, 2026
+- `d430649` Add candidate status filters ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/d430649964e0aef642d4e293b1eb6586afab14e7)) - Feb 12, 2026
+- `672c296` Merge pull request #487 from WorkUp-Health/f/fixScoreFilter ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/672c296daad6e87023c68c1cffdafc758cc157e9)) - Feb 12, 2026
+  Fix scoring float filters and unify into constant
+- `1f99360` Fix scoring float filters and unify into constant ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/1f993603b33b57f420127aac3fcb009fab6a0336)) - Feb 12, 2026
+- `4609eb0` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/4609eb03c782bc98ea8929e81d108c11997eacb1)) - Feb 10, 2026
+- `c68cdf3` Fix candidate actions endless loop ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/c68cdf3ab1804a7fa694115f1374db24ad6fb5fd)) - Feb 10, 2026
+- `9317866` Merge pull request #482 from WorkUp-Health/f/showTopMatchesToAll ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/93178664a2ef91a04d53022034195b718a6476b8)) - Feb 10, 2026
+  Show `Top Matches` tab to all admin users
+- `64ba4a5` Show `Top Matches` tab to all admin users ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/64ba4a5f461e884dd87c48e5fdd523152e648722)) - Feb 10, 2026
+- `0ae71a7` Fix invite to apply dialog ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/0ae71a79109256703f5a07b7a1397308f00e43c1)) - Feb 10, 2026
+- `1a4621f` Merge pull request #481 from WorkUp-Health/f/candidatesToEngage ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/1a4621f62d8b25dd6cf77df6cefcadb409ff281e)) - Feb 10, 2026
+  Add "candidates to engage" to priority view
+- `7a5ed42` PR comments ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/7a5ed42436110f5de8f3791ddfabed104b9bdd65)) - Feb 10, 2026
+- `5659e73` Add "candidates to engage" to priority view ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/5659e73bc873b6b51188f64943e60694c0c36444)) - Feb 10, 2026
+- `02fa8a3` Merge pull request #477 from WorkUp-Health/f/priorityView ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/02fa8a3733e321c9a478f260950ca798b5d5812f)) - Feb 9, 2026
+  Add Priority View - Roles carousels
+- `957e3d9` Remove in process application filter - unneeded ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/957e3d99bae33b3494b7c14f76d883e7eac2fd6e)) - Feb 9, 2026
+- `4bc93ed` Update nav tests ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/4bc93ed32b5f67d811acabb3b1b2732b69d6c4a4)) - Feb 6, 2026
+- `5b13e9e` Add Priority View - Roles carousels ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/5b13e9e8476ba524349d579cf292540850a8646a)) - Feb 6, 2026
+- `c9dc9f8` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/c9dc9f8edd7319968918a83656669de1b5ecbae8)) - Feb 3, 2026
+- `f04a012` Add location to recent activity tab ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/f04a012e2569e1c9140186bcac1e1d5a086e06af)) - Feb 3, 2026
+- `89507d9` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/89507d9b1d85bbc14f3a3e393660f66902c25b94)) - Feb 2, 2026
+- `76f1fa6` Update to include candidate req id in potential keys ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/76f1fa645444ed0a36600a1ed6bffb0d13e3c419)) - Feb 2, 2026
+- `0241eb6` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/0241eb6b86095dd3926d65ede05e764248ecc680)) - Feb 2, 2026
+- `50252d0` Merge pull request #471 from WorkUp-Health/h/zachUpdates ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/50252d0561b11ad4a73bfbd3033404fdf0d92acc)) - Feb 2, 2026
+  Add three now Recent Activity columns and Export Button
+- `186dc34` Add three now Recent Activity columns and Export Button ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/commit/186dc3406dfb9e9e895459b6915864fd8263790c)) - Feb 2, 2026
+
+#### WorkUp-Health/WorkUp-Service
+
+- `8181a11` Merge pull request #1110 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/8181a116fcc4083d2098314aff55f6008c8eaf5e)) - Feb 26, 2026
+  2026-02-26 - Dev -> Staging
+- `3dab075` Merge pull request #1111 from WorkUp-Health/f/rediscoveryMetrics ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/3dab075db350857fb834e27f9d62edf502f26868)) - Feb 26, 2026
+  Add metrics for rediscovery bar
+- `b8fcdca` Add operation label to getSystemMatchTotal error context ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/b8fcdcaec913481e83a0fe5621a6f2a2b1a10175)) - Feb 26, 2026
+  The context arg was a duplicate of params, adding no debugging value.
+- `9aa83d2` Add metrics for rediscovery bar ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/9aa83d2452605dbf89cc68a524bd5e0d42f94eac)) - Feb 26, 2026
+- `9d9857a` Merge pull request #1107 from WorkUp-Health/f/priorityIntoRediscovery ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/9d9857a7e23efbb69f2531bbea14e22de00265a8)) - Feb 26, 2026
+  Make Rediscovery view behave more like Priority View
+- `de4ddfe` Remove dead code: getAllPaginated and getFocusAreaOpportunityIds ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/de4ddfe8ed2c68c5a92d2a9a085049f092ebe446)) - Feb 26, 2026
+  getAllPaginated was replaced by getAllPaginatedWithSort and had no
+  remaining callers. getFocusAreaOpportunityIds was never called anywhere.
+  Removes associated tests for getAllPaginated.
+- `9fdb985` Make Rediscovery view behave more like Priority View ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/9fdb985f00520ac08f74fa3f8366949b094164af)) - Feb 26, 2026
+- `fb4c21a` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/fb4c21abeab530bf6d1f1b154f93dfe6279a8ee6)) - Feb 24, 2026
+- `77263e4` Merge pull request #1106 from WorkUp-Health/f/candidate-set-cte-optimization-hotfix ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/77263e48e507e82dab1780d426d579967b46d6c0)) - Feb 24, 2026
+  HOTFIX: Improve Candidate Answers and Event query performance
+- `27ebd6c` Improve Candidate Answers and Event performance ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/27ebd6ce088ee29ee52c6473023072743a761d87)) - Feb 24, 2026
+- `fafc69b` Merge pull request #1100 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/fafc69bf77440faa9390df4c607f5084047a5728)) - Feb 19, 2026
+  2026-02-19 - Dev -> Staging
+- `fcc7273` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/fcc7273c0de6f30d6f88d252771fd81bc14037c0)) - Feb 19, 2026
+- `45659ae` Merge pull request #1099 from WorkUp-Health/staging ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/45659ae4568b928da23d6148effcf47191c7d954)) - Feb 19, 2026
+  2026-02-19 - Release
+- `bd90de7` Add tests and logs for future SQL snakecase vs camelcase catches ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/bd90de772ee967f80a603cf43e04374786bf534d)) - Feb 19, 2026
+- `222e4d5` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/222e4d515f887d759c5a524faa277d92c718e270)) - Feb 18, 2026
+- `8299711` Merge pull request #1098 from WorkUp-Health/h/customFormResumeLink ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/82997114cea5047df65b1e8501eef1a500731ae5)) - Feb 18, 2026
+  HOTFIX: Fix new apply flows to actually save resume link properly
+- `2766ddc` Remove script ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/2766ddc2d33319dd9e0cde9896df237d0b250494)) - Feb 18, 2026
+- `126af40` Fix new apply flows to actually save resume link properly ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/126af4061f88f4990555132914232ed4f34dbca3)) - Feb 18, 2026
+- `1b9f368` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/1b9f3682a24548112106fc4e2e9392a5dba0f027)) - Feb 18, 2026
+- `266e17e` Fix event.details poor performance ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/266e17ed9ff162ea2131da5e4a2cda4a735ce190)) - Feb 18, 2026
+- `7e21422` Merge pull request #1094 from WorkUp-Health/f/candidateStatusFilters ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/7e2142253eb6416b75949c5806c3ad3b3703893c)) - Feb 13, 2026
+  Add candidate status filters
+- `3aa5a82` Fix tests ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/3aa5a82ca16460e48e5c619952adbddeb9d4a00d)) - Feb 12, 2026
+- `3b28722` Flip is vs not fix ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/3b287227ea3075a005fe09ab7b2a09e98aa00f8f)) - Feb 12, 2026
+- `a407992` Add candidate status filters ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/a40799255014ff55b93ccec1de42414f6ccfca21)) - Feb 12, 2026
+- `4c2215e` Merge pull request #1092 from WorkUp-Health/b/fixFloatScoring ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/4c2215ef21c42608225caad1f3ad9920e5cd7bd8)) - Feb 12, 2026
+  Fix float scoring ranges vs old integer scoring approach
+- `a537643` Fix float scoring ranges vs old integer scoring approach ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/a537643ca12b1394950676f6aee61b426ab000a3)) - Feb 12, 2026
+- `dc2e1ed` Add staging for priority_view tables ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/dc2e1ed6a35317f8e4a89593850e9fe9cd214191)) - Feb 10, 2026
+- `6c82099` Add to opportunity data to trigger engagement on frontend ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/6c820991364e91f43b8fe97a199e0cef06402ad7)) - Feb 10, 2026
+- `4354f30` Ignore local patch file ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/4354f301d8492ee950c7f38b42137d48f1431ede)) - Feb 10, 2026
+- `32cf3d8` Merge pull request #1090 from WorkUp-Health/f/candidatesToEngage ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/32cf3d838917d2b633a4bfc8f5b09ddc8751a82f)) - Feb 10, 2026
+  Add Candidates to Engage to priority-view endpoints and queries
+- `58c599e` Update priority view test ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/58c599eb91d1b12e32e5cb93eebde31ac6ee21ba)) - Feb 10, 2026
+- `079cfb3` Add Candidates to Engage to priority-view endpoints and queries ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/079cfb30eb17dcfffe3c950f75df01a2bcc48f8e)) - Feb 10, 2026
+- `1f480bf` Remove unneeded priority view configs ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/1f480bf0ceb834705936e0f59e2b82a1ff1453a1)) - Feb 9, 2026
+- `0a3f2d3` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/0a3f2d30314b7895631c7b72057f98e8fa88a0f2)) - Feb 9, 2026
+- `46af74b` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/46af74bba6d424edf9cd53741ac3219885360812)) - Feb 9, 2026
+- `48b0a7a` Merge pull request #1087 from WorkUp-Health/h/specialtyIdMerge ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/48b0a7a17b809bbc01c1693427f3f4181bed34b6)) - Feb 9, 2026
+  HOTFIX: Format specialtyId on work history to avoid multiples error
+- `ba51a83` Merge pull request #1086 from WorkUp-Health/f/priorityView ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/ba51a8356bfff66e99bbc0958c2f958ec7cf45d9)) - Feb 9, 2026
+  Add endpoints and queries for Priority View in Admin-platform
+- `2568eb2` Remove hardcode system configs and use Airtable/PG ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/2568eb2e83fae1394a43b9e8adfd38bd9b90fa67)) - Feb 9, 2026
+- `2b9550c` Format specialtyId on work history to avoid multiples error ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/2b9550cccb9b0a7a54d0a67e6d8d683c0f6029b8)) - Feb 9, 2026
+- `9f9cf0b` Remove dead totalCandidates metric ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/9f9cf0b5cd43883fa2b2fb19a6baa2109d661b24)) - Feb 6, 2026
+- `c1fe7c2` Add endpoints and queries for Priority View in Admin-platform ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/c1fe7c22ac115ffb27a88f204a892fe001f9a0d3)) - Feb 6, 2026
+- `c9a3f67` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/c9a3f67f9b9a594088e44d863ca5883c67ff788c)) - Feb 3, 2026
+- `d71a1e5` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/d71a1e5f33fe386bc3b120f58971f702953b7f70)) - Feb 3, 2026
+- `d9975ab` Add location to Recent Activity reporting ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/d9975abcb7e3c880c965456a2fa46362ca6f8b35)) - Feb 3, 2026
+- `faf2623` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/faf26232340498730b1c393f44cb2314a85feeca)) - Feb 2, 2026
+- `9c48ffc` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/9c48ffc4513ad936aac3bc7500a3fcfd10624367)) - Feb 2, 2026
+- `17124fd` Add separate Recent Activity table for special Scott behavior ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/17124fd61b212d81cad73d79085bbcf5db0d0448)) - Feb 2, 2026
+- `0206699` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/0206699b055806ac1cf6c7ba29a505fc60bddc9f)) - Feb 2, 2026
+- `eee38b7` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/eee38b7abac8d157b593bd94737f49d3fb5e0526)) - Feb 2, 2026
+- `25dfc33` Merge pull request #1077 from WorkUp-Health/h/zachUpdates ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/25dfc3386519eaf27ba0b3f8619a3e2b2e46e2a9)) - Feb 2, 2026
+  Add two new status columns and lastupdatedat, plus export
+- `59c39eb` Add two new status columns and lastupdatedat, plus export ([link](https://github.com/WorkUp-Health/WorkUp-Service/commit/59c39eba26bd039a1db78bbcb1eae2b2f1fc5c12)) - Feb 2, 2026
+
+#### WorkUp-Health/WorkUp-BigQuery
+
+- `e887ac1` Merge pull request #151 from WorkUp-Health/f/rediscoveryMetrics ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/e887ac15900c78ac001b8f201ca73ddb381f43a3)) - Feb 26, 2026
+  Add funnel stages for Metrics counts in rediscovery
+- `ede94e8` Claude and readme updates ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/ede94e86bffebb348dc82a5596e54634be3f2801)) - Feb 26, 2026
+- `e0de809` Add funnel stages for Metrics counts in rediscovery ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/e0de8093150bcbb33c8f9730d31bf06429958966)) - Feb 26, 2026
+- `7263918` Re-update priority view for new role and title config types ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/7263918ebdbaa6c7835881b177845b4aef748b13)) - Feb 25, 2026
+- `c1c2c16` Change priority roles and titles types ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/c1c2c1640523c0f502dde0f587b6f3fb34fde1c1)) - Feb 25, 2026
+- `feb35dc` Change priority view score matches to 7 ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/feb35dc16fe1c88c3c0800857df7c0ba2c6a97c8)) - Feb 25, 2026
+- `1094e54` Merge pull request #149 from WorkUp-Health/f/prioritySorting ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/1094e543a1af3e99431a632b0fd71dee269e9fd3)) - Feb 25, 2026
+  Compute days open and priority scores for sorting
+- `4934e3d` Compute days open and priority scores for sorting ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/4934e3dfca2fa9f125437eda933c6a96bb227cd1)) - Feb 25, 2026
+- `5952fe3` Merge pull request #148 from WorkUp-Health/f/matchingUpdates ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/5952fe3937db73a76df7769823ce139757636285)) - Feb 23, 2026
+  Add multiple matching score updates
+- `d0754bd` Align Priority View score threshold with filterConfigs (7.0 -> 6.3) ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/d0754bd6aea270ca9bfbf9710f5ae0dd6e30d164)) - Feb 23, 2026
+  PV role_stats and candidates queries now use >= 6.3 ("Good" tier) to
+  match the Rediscovery filterConfigs valueOptions and FilterSummaryCard.
+- `575277e` Add 44 career role aliases for improved Tier 4 matching ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/575277e43ff404d46004045e07ee26814c1fbf95)) - Feb 23, 2026
+  Covers Medical Receptionist, Medical Assistant, Scheduling Coordinator,
+  Veterinary, RN credential variants, and other high-impact gaps validated
+  against actual opportunity career_role_label data.
+- `df690f7` Improve reverse matching scoring and fix structural issues ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/df690f7f9f7a23a9f468b433b8eaa02ada543eb3)) - Feb 23, 2026
+  Scoring: 8-bucket location scoring (was 4), 8-bucket warmth float (was 4
+  integer), rejection penalty based on rate/count, overall_score formula
+  rewrite with 0.6-10.0 clamping.
+  
+  Structural: first-label approach for role inference (fixes multi-label
+  contamination), specialty matching (+0.5 bonus from 3 sources), rejection
+  and specialty folded into qualifications term.
+  
+  Bug fixes: last-application tiebreaker, specialty case sensitivity,
+  redundant CAST cleanup, specialty_id FK over free-text.
+  
+  Production and staging files.
+- `e81c9d3` Update onboarding guide for application data for new customers ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/e81c9d3acffe0d45d3eb7e0b9cf5a6f887f1b4f9)) - Feb 23, 2026
+- `cef4880` Add GoodVets to email appsscript automation ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/cef4880b4ac8f6516c70e636f58159cd939bfcf1)) - Feb 20, 2026
+- `38f32af` Add funnel and engagement detail views for AHS and GoodVets ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/38f32af8c1aa6447a387627450894dc55b36cf6f)) - Feb 20, 2026
+  Replicates the existing nycancer_funnel_detail and nycancer_engagement_detail
+  views for AHS (recYHZzhBmmeCEhQb) and GoodVets (recQXLSXN2AeOcObv) in the
+  pm_reporting dataset. Views are authorized in all source datasets.
+- `dcb49a4` Remove 'requires sponsorship' from disqualification patterns ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/dcb49a4298d84a6241dd24eec6d6a275f4d0e778)) - Feb 19, 2026
+- `325ab05` Dedupe recent activity using workup_user_id as first prio ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/325ab05de6fc74184ebe9d07f50fa363354ba55b)) - Feb 19, 2026
+- `6602ace` Merge pull request #146 from WorkUp-Health/dependabot/npm_and_yarn/past-applicant-data/multi-46e2463325 ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/6602ace96b87bc217e012fa26bbcdfe2449543c8)) - Feb 19, 2026
+  Bump fast-xml-parser and @google-cloud/storage in /past-applicant-data
+- `9e456f7` Merge pull request #142 from WorkUp-Health/f/updateDistanceScoring ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/9e456f78c43532782f175e46052b94590ce7b6fd)) - Feb 19, 2026
+  Further segment distance scores
+- `b831d7a` Add another disqualification pattern for 'cannot hire' ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/b831d7ab674e3dbd52b018e26739f4675b21d589)) - Feb 18, 2026
+- `57134ed` Pass through all candidate statuses for filtering ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/57134edba840cd55049abe825be0cf112892c293)) - Feb 18, 2026
+- `7fc19ad` Further segment distance scores ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/7fc19ada631c30129c61f198c2feab395940ba05)) - Feb 13, 2026
+- `f6c1549` Add "carry forward" to NY Cancer for terminal status with no email/phone ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/f6c1549aa6199ed31bb22515a2e03f1ebaaacdc5)) - Feb 12, 2026
+- `bc154ea` Fix NY Cancer new quotes issue and docs around Jazz  vs Workday ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/bc154eabc914506b7c03777f4a8b0fb246ecd505)) - Feb 12, 2026
+- `33f9da3` Update NY Cancer Background Check -> Offer ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/33f9da37b6ae91ab2d952afe5c0e761755b9997e)) - Feb 12, 2026
+- `99f3cbf` Fix staging candidate engagement columns ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/99f3cbf60b5f3a30c3da0e71681196793da9f739)) - Feb 12, 2026
+- `99db77a` Add sms opt out join to staging ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/99db77acdecddb343a34bcb674f9fca4c320e798)) - Feb 12, 2026
+- `41fe6b5` Add sms_opt_out_keywords and utilize everywhere ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/41fe6b5a3b3062e22110b2aa56260cafb770821b)) - Feb 12, 2026
+- `ea6c8ca` Merge pull request #140 from WorkUp-Health/f/addMoreCommonDisqualifications ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/ea6c8ca0bf6342bd7fac3005e525ea081133de1e)) - Feb 12, 2026
+  Add more disqualifications found in comments and reasons
+- `ec26cb0` Add more disqualifications found in comments and reasons ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/ec26cb02171deadffa05f08c78dd570d4e2ba31f)) - Feb 12, 2026
+- `2ffb44f` Move priority view into production folder ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/2ffb44f1b9179cefbc271555586a203a881314c2)) - Feb 12, 2026
+- `01cccd3` Fix AHS Ortto campaign name ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/01cccd32d11b78f012a7644a3d0d3291fe80b1f6)) - Feb 11, 2026
+- `bf668e2` Keep tables documented for Scott special reporting views ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/bf668e2d241bf370a59848abca602b3c3c2d056f)) - Feb 11, 2026
+- `4a80e98` Clean up more old Ortto ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/4a80e98eca6bff35be978e8a8ba4f665630f359b)) - Feb 11, 2026
+- `d7353de` Finalize Ortto backfill ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/d7353de0a4499fce3ad68a64ef0733e0c0dc334b)) - Feb 11, 2026
+- `d174bb8` Update dates and metadata for historical ortto in attribution ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/d174bb893324e5a75d161ee523c9d124d8389c01)) - Feb 11, 2026
+- `e2ec9c0` Merge pull request #138 from WorkUp-Health/f/oldOrtto ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/e2ec9c0de6c32ebb747a9ff913ad346f3c0cbbdc)) - Feb 10, 2026
+  Backfill old Ortto data (pre-Segment) - Adds ~50 hires back to AHS
+- `63d9dc8` Backfill old Ortto data (pre-Segment) - Adds ~50 hires back to AHS ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/63d9dc86d43d5e13c8d40fe722b896faa680227e)) - Feb 10, 2026
+- `1670f19` Add staging for priority view ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/1670f19c7529b0a7a4c03c112dd2b8ae01b797bb)) - Feb 10, 2026
+- `dee415e` Merge pull request #137 from WorkUp-Health/f/candidatesToEngage ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/dee415eb37e54583b1ba59ea8f1444044e7f4de1)) - Feb 10, 2026
+  Update priority view tables - especially candidates to engage
+- `8c58d6a` Fix other truthy check and docs ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/8c58d6ad0e04027c39873be2abe9f74519826ecb)) - Feb 10, 2026
+- `2017804` Fix truthy check in priority view ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/2017804866f7488cf342735d2658594e604261a8)) - Feb 10, 2026
+- `8caf9a3` Update priority view tables - especially candidates to engage ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/8caf9a32abc34d010985efc4502e9739f10db8e9)) - Feb 10, 2026
+- `4f26992` Add phase_of_application to match table ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/4f26992ec0e21c1a0d81493850e85650f3e137e0)) - Feb 9, 2026
+- `2eb70cf` Update candidate statuses to exclude from priority view ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/2eb70cfd99156d57e1f44a32dfa17961c339d70e)) - Feb 9, 2026
+- `6b1ad1f` Merge pull request #135 from WorkUp-Health/f/priorityView ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/6b1ad1f44bbd83da69ad712b760288d303a5ec4a)) - Feb 9, 2026
+  Add Priority View tables for Roles and Candidates
+- `fbd71b1` Update to use airtable for priority roles ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/fbd71b16e1508cd8e273e467d6cac9b40984b6d6)) - Feb 9, 2026
+- `f15c983` Update ny cancer fixes for new issue in this weeks file ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/f15c98315c704490d9fd4ef680ff2aa6fff3f337)) - Feb 9, 2026
+- `3587783` Remove dead totalCandidates metric ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/358778393a634365bf7dedd83d02390d763e5850)) - Feb 6, 2026
+- `a5017c1` Add Priority View tables for Roles and Candidates ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/a5017c1e6f4ed201ee8062f96b6d72f8f1107fb8)) - Feb 6, 2026
+- `c4853ff` For AHS new applicants set `To be Reviewed` default status ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/c4853ff26be3f14741053993544e284199f9daff)) - Feb 5, 2026
+- `8edbc7e` Update multifile to include new applicants with no other refs ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/8edbc7eb77df7a0153c9105e846ac8b20e8b1c83)) - Feb 5, 2026
+- `84ef9bc` Add 'active' status for GoodVets ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/84ef9bc09efecfc3939e4fc456f43326940703e6)) - Feb 3, 2026
+- `bf569d8` Add fallback for locations from Opp data in Airtable ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/bf569d8495fab42f0a80d0f52592278822f7b07a)) - Feb 3, 2026
+- `42d7a9b` Add app.location to recent-activity-applications ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/42d7a9b2e4e66828ecc8f8582893a2a411c3d32e)) - Feb 3, 2026
+- `af595eb` Update deduping on recent activity ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/af595eba16fe323e8477f65d2071a1ea56f31cac)) - Feb 2, 2026
+- `26cc9e7` Add separate Recent Activity table for special Scott behavior ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/26cc9e7b09e472ab4ed6d54fd9c5ddbc31a15154)) - Feb 2, 2026
+- `394216f` Merge pull request #132 from WorkUp-Health/f/updateAttributionApproach ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/394216f9ccf7812b97cceaaac4011b90b6089aa1)) - Feb 2, 2026
+  Remove user import event and add other sms/email to attribution
+- `86e2dac` Remove user import event and add other sms/email to attribution ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/commit/86e2dac476f6367e50931fc5572eba622cfe6a89)) - Feb 2, 2026
+
+#### WorkUp-Health/WorkUp-Opportunity-Ingestion
+
+- `c6784c1` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/commit/c6784c1f336c9598ad6622082b259eb47955f132)) - Feb 25, 2026
+- `8af7ce8` Add job_family/department to autogenerating old opps ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/commit/8af7ce820b318967361268a0fa2ca889e32f128a)) - Feb 25, 2026
+- `b114a86` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/commit/b114a8682e13fca2d0663b592121ab92e7bb5523)) - Feb 24, 2026
+- `b74deb1` Merge branch 'main' into staging ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/commit/b74deb182a67055b6ecfc3c474feee7af046b382)) - Feb 24, 2026
+- `05e68f6` Merge pull request #71 from WorkUp-Health/h/radAssistants ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/commit/05e68f6ff6674a9a75c0ef99a86f0db4341380a7)) - Feb 24, 2026
+  Small prompt update for Rad Tech vs Rad Assistant
+- `3d67431` Small prompt update for Rad Tech vs Rad Assistant ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/commit/3d67431983002038b2628c09ff4e778de18c2c1e)) - Feb 24, 2026
+- `df9433d` Merge pull request #66 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/commit/df9433d359443d0a55552c8640ce5c32d4f7b1b4)) - Feb 19, 2026
+  2026-02-19 - Dev -> Staging
+
+#### WorkUp-Health/WorkUp-Postgres
+
+- `f7e5868` Change high priority column types ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/f7e586887481dca67363d73bd2b08a2663e95bdf)) - Feb 25, 2026
+- `b01c9a4` Merge pull request #91 from WorkUp-Health/f/IRTech ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/b01c9a4bbff29b62c7e1ae4f248da7b3d097c61f)) - Feb 23, 2026
+  Add 'IR Technologist' to career roles
+- `9a20841` Add 'IR Technologist' to career roles ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/9a208411f2adcb48e88e9fec01bacd56803ee15e)) - Feb 23, 2026
+- `eb15329` Merge pull request #89 from WorkUp-Health/f/priorityRolesAndTitles ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/eb153290c591b146c608bd89dc9b022ccda9f43f)) - Feb 9, 2026
+  Add new systems columns for high priority roles and titles (from Airt…
+- `b76bd90` Change from TEXT[] to TEXT because of Airtable ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/b76bd9039f3da3ceba562fec50b30eebc5395469)) - Feb 9, 2026
+- `ae67db5` Add new systems columns for high priority roles and titles (from Airtable) ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/ae67db5e926ab88575182f0ece008040bada1806)) - Feb 9, 2026
+- `3ebc8db` Merge pull request #87 from WorkUp-Health/f/eventFormsIndex ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/3ebc8dbd1c6fdeae24baa3250cd6f845fa681cc2)) - Feb 3, 2026
+  Add index to event_forms table
+- `2bcc815` Add index to event_forms table ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/commit/2bcc815ae0b7c3b9eb7a36277f3c34cbb0d45037)) - Feb 3, 2026
+
+#### WorkUp-Health/WorkUp-Front-Plugin
+
+- `12ef853` Merge pull request #9 from WorkUp-Health/dependabot/npm_and_yarn/front-contact-merge/webhook/ajv-8.18.0 ([link](https://github.com/WorkUp-Health/WorkUp-Front-Plugin/commit/12ef853994933740ed829141dbfcba9be63058a6)) - Feb 19, 2026
+  Bump ajv from 8.17.1 to 8.18.0 in /front-contact-merge/webhook
+- `93743b1` Update top matches to re-fetch on changes ([link](https://github.com/WorkUp-Health/WorkUp-Front-Plugin/commit/93743b11d8d1ba57feb454be01da71365dcb9905)) - Feb 18, 2026
+- `76423f1` Clear matches after location or career prefs updates ([link](https://github.com/WorkUp-Health/WorkUp-Front-Plugin/commit/76423f1f98092726d8edfd33ec9f60b6c4f400c6)) - Feb 18, 2026
+
+#### WorkUp-Health/WorkUp-Parser-Magic
+
+- `cb1b4c0` Merge pull request #46 from WorkUp-Health/dependabot/npm_and_yarn/multi-8d92d2c9b2 ([link](https://github.com/WorkUp-Health/WorkUp-Parser-Magic/commit/cb1b4c0e41df0c2f62024e68c7489e787ff745ee)) - Feb 25, 2026
+  Bump minimatch
+- `a71ce20` Merge pull request #42 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-Parser-Magic/commit/a71ce20a4625af30d58e28b198a43abf1c051e6f)) - Feb 19, 2026
+  2026-02-19 - Dev -> Staging
+- `cd24391` Merge pull request #40 from WorkUp-Health/h/specialtyIdPromptUpdate ([link](https://github.com/WorkUp-Health/WorkUp-Parser-Magic/commit/cd243910246c562c9f7d6dc8e3b90ea2b23fd333)) - Feb 9, 2026
+  Update work history specialtyId to be one only
+- `cae1d24` Update work history specialtyId to be one only ([link](https://github.com/WorkUp-Health/WorkUp-Parser-Magic/commit/cae1d24f3504cb6bd3d9fca5ff2ebceaff73f094)) - Feb 9, 2026
+
+#### WorkUp-Health/WorkUp-emailer
+
+- `e52db72` Merge pull request #73 from WorkUp-Health/dependabot/npm_and_yarn/basic-ftp-5.2.0 ([link](https://github.com/WorkUp-Health/WorkUp-emailer/commit/e52db722413c8fa8903950f3d769c9c90f56f8a3)) - Feb 26, 2026
+  Bump basic-ftp from 5.1.0 to 5.2.0
+- `2749947` Merge pull request #71 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-emailer/commit/2749947f266e166dc155a39a1966c67dfe874500)) - Feb 19, 2026
+  2026-02-19 - Dev -> Staging
+- `c22266a` Merge pull request #66 from WorkUp-Health/dependabot/npm_and_yarn/axios-1.13.5 ([link](https://github.com/WorkUp-Health/WorkUp-emailer/commit/c22266ad89a1148791d4e260bcdc8c9fdb1526ef)) - Feb 11, 2026
+  Bump axios from 1.13.4 to 1.13.5
+
+#### WorkUp-Health/Workup-Link-Router
+
+- `2f73621` Merge pull request #57 from WorkUp-Health/dependabot/npm_and_yarn/multi-e24801ecd2 ([link](https://github.com/WorkUp-Health/Workup-Link-Router/commit/2f73621d211e86aa58e7aa6a3f917a2e702e7914)) - Feb 25, 2026
+  build(deps): bump minimatch
+- `2ba950a` Merge pull request #54 from WorkUp-Health/staging ([link](https://github.com/WorkUp-Health/Workup-Link-Router/commit/2ba950ad0402d067e4844e70e534a763807a0e67)) - Feb 19, 2026
+  2026-02-19 - Release
+
+#### WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline
+
+- `789e88b` Merge pull request #27 from WorkUp-Health/dependabot/npm_and_yarn/airtable-to-bigquery/jws-4.0.1 ([link](https://github.com/WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline/commit/789e88bb6938a86cd7252e31d562c0f9eb945c59)) - Feb 25, 2026
+  Bump jws from 4.0.0 to 4.0.1 in /airtable-to-bigquery
+- `5e6546a` Merge pull request #25 from WorkUp-Health/dependabot/npm_and_yarn/multi-b76f68e119 ([link](https://github.com/WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline/commit/5e6546a380956ebec235a3d73c61a6cdda95789e)) - Feb 25, 2026
+  Bump minimatch
+- `b450faa` Change created_at type ([link](https://github.com/WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline/commit/b450faa5563f037e065bbcb53e7f548ccaf2146a)) - Feb 25, 2026
+- `8e4596e` Merge pull request #26 from WorkUp-Health/h/addCreatedAtToOpps ([link](https://github.com/WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline/commit/8e4596e2a1772b51df9c82b4810559275f8f376b)) - Feb 25, 2026
+  Add created_at from Airtable opportunities
+- `4cc5545` Add created_at from Airtable opportunities ([link](https://github.com/WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline/commit/4cc5545e2fb61a805d6f4ecdec51122fcd180545)) - Feb 25, 2026
+- `1157f07` Add deactivated_at from Airtable ([link](https://github.com/WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline/commit/1157f07a5e60f21568986b1f33780a1c690ff906)) - Feb 11, 2026
+
+#### WorkUp-Health/WorkUp-Scheduled-Jobs
+
+- `9d23b65` Merge pull request #146 from WorkUp-Health/dev ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/commit/9d23b65237154208db939e8928609d260d7e6223)) - Feb 19, 2026
+  2026-02-19 - Dev -> Staging
+- `1625cd9` Merge pull request #145 from WorkUp-Health/dependabot/npm_and_yarn/shared-utils/multi-46e2463325 ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/commit/1625cd91c1d0c473261d8d6deb557f0adba552d7)) - Feb 19, 2026
+  Bump fast-xml-parser and @google-cloud/storage in /shared-utils
+- `929968c` Merge pull request #134 from WorkUp-Health/f/limitEventRecapEmail ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/commit/929968c90011771ed8f81cfb7350fb4d6704642c)) - Feb 3, 2026
+  Exclude new apply flow events from Event Recap email
+- `cac116f` Exclude new apply flow events from Event Recap email ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/commit/cac116f99f266a2967bbb169a1425874a63f7a29)) - Feb 3, 2026
+- `d59ba12` Merge pull request #133 from WorkUp-Health/f/addApplicantValidations ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/commit/d59ba12aea46918ba55eaae7d16e5fd1cf80ed71)) - Feb 3, 2026
+  Add phone, name, email validations for create users job
+- `c2458e3` Add CLAUDE.md for docs ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/commit/c2458e36d0542e998d52fa47c19d5aac30c6fb7a)) - Feb 2, 2026
+- `147c90b` Add phone, name, email validations for create users job ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/commit/147c90bc5bfdaf49c9218d5130189dd97656d20a)) - Feb 2, 2026
+
+#### WorkUp-Health/Workup-App
+
+- `31c8177` Merge branch 'staging' into dev ([link](https://github.com/WorkUp-Health/Workup-App/commit/31c817729a3e4280e6148fc6f6cda4a65e8beb09)) - Feb 10, 2026
+- `dbda92a` Upgrade eslint-config-next ([link](https://github.com/WorkUp-Health/Workup-App/commit/dbda92a5f7f333941bfb15eafeefa29c9248b933)) - Feb 10, 2026
+
+### Pull Requests (39 total)
+
+### WorkUp-Health/WorkUp-Admin-Platform
+
+#### #521: Update default filters for rediscovery and a few small tweaks - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/521))
+
+- **Changes:** 9 files (+47 / -98)
+- **Created:** Feb 26, 2026
+- **Merged:** Feb 26, 2026
+
+**Description:**
+[CU-86afkttb4](https://app.clickup.com/t/86afkttb4)
+
+#### #518: Add top metrics bar for Rediscovery - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/518))
+
+- **Changes:** 3 files (+394 / -6)
+- **Created:** Feb 26, 2026
+- **Merged:** Feb 26, 2026
+
+**Description:**
+[CU-86afkt654](https://app.clickup.com/t/86afkt654)
+
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1111
+
+#### #513: Make Rediscovery view behave more like Priority View - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/513))
+
+- **Changes:** 18 files (+1282 / -814)
+- **Created:** Feb 26, 2026
+- **Merged:** Feb 26, 2026
+
+**Description:**
+[CU-86afkt0rr](https://app.clickup.com/t/86afkt0rr)
+
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1107
+
+#### #505: HOTFIX: Fix match score filter back to integer from single select - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/505))
+
+- **Changes:** 2 files (+5 / -11)
+- **Created:** Feb 24, 2026
+- **Merged:** Feb 24, 2026
+
+#### #500: Matching updates for new filtering approach - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/500))
+
+- **Changes:** 4 files (+37 / -5)
+- **Created:** Feb 23, 2026
+- **Merged:** Feb 23, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+#### #488: Add candidate status filters - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/488))
+
+- **Changes:** 4 files (+54 / -6)
+- **Created:** Feb 12, 2026
+- **Merged:** Feb 13, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+To Candidates and Rediscover view. Rediscovery view only gets the two statuses available from BigQuery (and that aren't already hard code excluded from matches)
+
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1094
+
+#### #487: Fix scoring float filters and unify into constant - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/487))
+
+- **Changes:** 2 files (+28 / -17)
+- **Created:** Feb 12, 2026
+- **Merged:** Feb 12, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+#### #486: Hotfix Release showing Top Matches for Monday - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/486))
+
+- **Changes:** 2 files (+7 / -68)
+- **Created:** Feb 12, 2026
+- **Merged:** Feb 12, 2026
+
+**Description:**
+[CU-86af8qd59](https://app.clickup.com/t/86af8qd59) 
+
+I just saw this has a due date of Monday so want to get it in
+
+#### #482: Show `Top Matches` tab to all admin users - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/482))
+
+- **Changes:** 2 files (+7 / -68)
+- **Created:** Feb 10, 2026
+- **Merged:** Feb 10, 2026
+
+**Description:**
+[CU-86af8qd59](https://app.clickup.com/t/86af8qd59)
+
+#### #481: Add "candidates to engage" to priority view - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/481))
+
+- **Changes:** 6 files (+640 / -31)
+- **Created:** Feb 10, 2026
+- **Merged:** Feb 10, 2026
+
+**Description:**
+[CU-86af24323](https://app.clickup.com/t/86af24323)
+
+
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1090
+https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/137/changes
+
+
+<img width="1674" height="799" alt="Screenshot 2026-02-10 at 1 33 34 PM" src="https://github.com/user-attachments/assets/bcbff1e8-585e-4499-a7bf-ce95d81f0767" />
+
+
+<!-- CURSOR_SUMMARY -->
+---
+
+> [!NOTE]
+> **Medium Risk**
+> Introduces a new data fetch and UI flows that trigger outreach actions; correctness depends on the new candidates API payload and client-side state updates when marking candidates as engaged.
+> 
+> **Overview**
+> Adds a new **“Candidates Ready to Engage”** section to Priority View, including paginated candidate cards that show recommended role, engagement history, and score.
+> 
+> Wires in candidate engagement actions (view candidate drawer and “Generate Outreach” flows for invite-to-apply, booking link, and reroute), and removes engaged candidates from the list client-side after sending.
+> 
+> Updates `priority-view/page.js` to fetch candidates from `/priority-view/candidates` in parallel with roles and treats either request failing as `dataLoadFailed` (with updated logging), plus minor spacing/button styling tweaks in the empty state and role section.
+> 
+> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 7a5ed42436110f5de8f3791ddfabed104b9bdd65. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
+<!-- /CURSOR_SUMMARY -->
+
+#### #477: Add Priority View - Roles carousels - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/477))
+
+- **Changes:** 13 files (+860 / -16)
+- **Created:** Feb 6, 2026
+- **Merged:** Feb 9, 2026
+
+**Description:**
+[CU-86aey415j](https://app.clickup.com/t/86aey415j)
+
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1086
+
+You'll seem some reference to "Candidates To Engage" as well - I've been working on that but need to finish it up and wanted to get this piece up for review separately
+
+
+<img width="1512" height="831" alt="Screenshot 2026-02-06 at 3 39 36 PM" src="https://github.com/user-attachments/assets/8200a1f3-7192-41d5-b90f-692815b34fc9" />
+
+
+#### #471: Add three now Recent Activity columns and Export Button - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/471))
+
+- **Changes:** 1 files (+120 / -8)
+- **Created:** Feb 2, 2026
+- **Merged:** Feb 2, 2026
+
+**Description:**
+[CU-86af0hzmh](https://app.clickup.com/t/86af0hzmh)
+
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1077
+
+### WorkUp-Health/WorkUp-Service
+
+#### #1111: Add metrics for rediscovery bar - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1111))
+
+- **Changes:** 6 files (+434 / -9)
+- **Created:** Feb 26, 2026
+- **Merged:** Feb 26, 2026
+
+**Description:**
+[CU-86afkt654](https://app.clickup.com/t/86afkt654)
+
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/518
+
+#### #1107: Make Rediscovery view behave more like Priority View - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1107))
+
+- **Changes:** 8 files (+351 / -334)
+- **Created:** Feb 26, 2026
+- **Merged:** Feb 26, 2026
+
+**Description:**
+[CU-86afkt0rr](https://app.clickup.com/t/86afkt0rr)
+
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/513
+
+#### #1106: HOTFIX: Improve Candidate Answers and Event query performance - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1106))
+
+- **Changes:** 2 files (+69 / -74)
+- **Created:** Feb 24, 2026
+- **Merged:** Feb 24, 2026
+
+#### #1098: HOTFIX: Fix new apply flows to actually save resume link properly - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1098))
+
+- **Changes:** 2 files (+18 / -9)
+- **Created:** Feb 18, 2026
+- **Merged:** Feb 18, 2026
+
+**Description:**
+https://workup-space.slack.com/archives/C0A281JFTC6/p1771418625434709
+
+
+For already authed users we weren't properly saving resume_link to their postgres profile because of camel case vs snake case. For non-authed users there was another resume function that they were falling back to.
+
+I backfilled the 10 metlife users who were affected by this already
+
+#### #1094: Add candidate status filters - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1094))
+
+- **Changes:** 8 files (+170 / -33)
+- **Created:** Feb 12, 2026
+- **Merged:** Feb 13, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+To Candidates and Rediscover view. Rediscovery view only gets the two statuses available from BigQuery (and that aren't already hard code excluded from matches)
+
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/488
+
+#### #1092: Fix float scoring ranges vs old integer scoring approach - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1092))
+
+- **Changes:** 2 files (+10 / -9)
+- **Created:** Feb 12, 2026
+- **Merged:** Feb 12, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+```
+  - 2.1 – 2.9 → Not caught by 0-2 (too high) or 3-6 (too low) → falls to ELSE 0
+  - 6.1 – 6.9 → Not caught by 3-6 (too high) or 7-8 (too low) → falls to ELSE 0
+  - 8.1 – 8.9 → Not caught by 7-8 (too high) or 9-10 (too low) → falls to ELSE 0
+  ```
+
+#### #1090: Add Candidates to Engage to priority-view endpoints and queries - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1090))
+
+- **Changes:** 5 files (+187 / -56)
+- **Created:** Feb 10, 2026
+- **Merged:** Feb 10, 2026
+
+**Description:**
+[CU-86af24323](https://app.clickup.com/t/86af24323)
+
+https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/137/changes
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/481
+
+#### #1087: HOTFIX: Format specialtyId on work history to avoid multiples error - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1087))
+
+- **Changes:** 2 files (+22 / -1)
+- **Created:** Feb 9, 2026
+- **Merged:** Feb 9, 2026
+
+**Description:**
+[Errors](https://console.cloud.google.com/logs/query;query=severity%3E%3D%22WARNING%22%0A--%20Skip%20errors%20where%20workup%20users%20are%20using%20BigQuery%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20protoPayload.serviceName%3D%22bigquery.googleapis.com%22%0A%20%20%20%20protoPayload.authenticationInfo.principalEmail%3D~%22@workup.health%22%0A%2529%0A--%20Skip%20SendGrid%20errors%20coming%20from%20emailer%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20resource.labels.function_name%3D%22workup-emailer%22%0A%20%20%20%20jsonPayload.message%3D%22Sendgrid%20error%20-%20Bad%20Request%22%0A%2529%0A--%20Skip%20additional%20errors%20related%20to%20SendGrid%20errors%20above%0AAND%20-%2528%0A%20%20%20%20jsonPayload.attemptResponseLog.status%3D%22INVALID_ARGUMENT%22%0A%20%20%20%20resource.labels.queue_id%3D%22email-task%22%0A%2529%0A-jsonPayload.message%3D~%22Sendgrid%20error%22%0A--%20Skip%20general%20task%20error%20logging%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20jsonPayload.@type%3D%22type.googleapis.com%2Fgoogle.cloud.tasks.logging.v1.TaskActivityLog%22%0A%20%20%20%20OR%20%0A%20%20%20%20resource.labels.function_name%3D%22workup-emailer%22%0A%2529%0A--%20Skip%20cloud%20run%20jobs%20error%20logging%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20resource.type%3D%22cloud_run_job%22%0A%2529%0A--%20Skip%20favicon%20endpoint%20404s,%20unneccessary%20%0AAND%20-%2528%0A%20%20%20%20httpRequest.status%3D%22404%22%0A%20%20%20%20httpRequest.requestUrl%3D%22https:%2F%2Fworkup-service-prod-gbp2b6u57q-uc.a.run.app%2Ffavicon.ico%22%0A%2529%0A--%20Skip%20API%20404s%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20jsonPayload.message%3D%22Resource%20not%20found%22%0A%20%20%20%20OR%20%2528%0A%20%20%20%20%20%20%20%20httpRequest.status%3D%22404%22%0A%20%20%20%20%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%22%0A%20%20%20%20%2529%0A%2529%0A--%20Skip%20401%2FUnauthorized%20API%20requests%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20%2528%0A%20%20%20%20%20%20%20%20httpRequest.status%3D%22401%22%0A%20%20%20%20%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%2Fapi%2F%22%0A%20%20%20%20%2529%0A%20%20%20%20OR%20%2528%0A%20%20%20%20%20%20%20%20severity%3E%22WARNING%22%0A%20%20%20%20%20%20%20%20jsonPayload.message%3D~%22auth%2Fid-token-expired%22%0A%20%20%20%20%2529%0A%2529%0A--%20Skip%20user%20409%20errors%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20httpRequest.status%3D%22409%22%0A%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%2Fapi%2Fusers%22%0A%2529%0AAND%20-%2528%0AtextPayload%3D~%22WARNING:%20Logging%20before%20InitGoogle%5C%2528%5C%2529%20is%20written%20to%20STDERR%22%0A%2529%0A--%20Skip%20Datastream%20PostgreSQL%20-%3E%20BigQuery%20warnings%0AAND%20-%2528%0AtextPayload%3D~%22transaction%20in%20progress%22%0A%2529%0A-jsonPayload.message%3D%22Issue%20getting%20geo%20-%20Cannot%20read%20properties%20of%20null%20%2528reading%20'length'%2529%20TypeError:%20Cannot%20read%20properties%20of%20null%20%2528reading%20'length'%2529%5Cn%20%20%20%20at%20documentValue%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fsearch%2Fdist%2Fcommands%2FSEARCH.js:29:23%2529%5Cn%20%20%20%20at%20Object.transformReply%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fsearch%2Fdist%2Fcommands%2FSEARCH.js:17:61%2529%5Cn%20%20%20%20at%20transformCommandReply%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fclient%2Fdist%2Flib%2Fcommander.js:89:20%2529%5Cn%20%20%20%20at%20Commander.commandsExecutor%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fclient%2Fdist%2Flib%2Fclient%2Findex.js:188:54%2529%5Cn%20%20%20%20at%20process.processTicksAndRejections%20%2528node:internal%2Fprocess%2Ftask_queues:95:5%2529%5Cn%20%20%20%20at%20async%20Client.search%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1718:14%2529%5Cn%20%20%20%20at%20async%20Search.callSearch%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1433:23%2529%5Cn%20%20%20%20at%20async%20Search.page%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1321:27%2529%5Cn%20%20%20%20at%20async%20Search.first%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1333:25%2529%22%0A--%20Skip%20logs%20related%20to%20user%20import%20endpoints%2Ftasks%0A-%2528%0A%20%20%20%20%2528%0A%20%20%20%20jsonPayload.message%3D~%22User%20import%20-%22%0A%20%20%20%20OR%0A%20%20%20%20jsonPayload.metadata.url%3D~%22%2Fimport-user%22%0A%20%20%20%20%2529%0A%2529%0A-jsonPayload.message%3D%22CSRF%20header%20not%20set%20on%20request%22%0A--%20Do%20not%20include%20email-campaigns%20errors%0A-%2528%0A%20%20%20%20severity%3DERROR%0A%20%20%20%20%2528%0A%20%20%20%20%20%20%20%20jsonPayload.message%3D~%22email-campaigns%2F%22%0A%20%20%20%20%20%20%20%20OR%0A%20%20%20%20%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%2Femail-campaigns%22%0A%20%20%20%20%2529%0A%2529;cursorTimestamp=2026-02-09T15:20:05.790999889Z;startTime=2026-02-09T15:17:19Z;endTime=2026-02-09T15:22:19Z?project=workup-service)
+
+https://github.com/WorkUp-Health/WorkUp-Parser-Magic/pull/40
+
+#### #1086: Add endpoints and queries for Priority View in Admin-platform - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1086))
+
+- **Changes:** 8 files (+1155 / -9)
+- **Created:** Feb 6, 2026
+- **Merged:** Feb 9, 2026
+
+**Description:**
+[CU-86aey415j](https://app.clickup.com/t/86aey415j)
+
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/477
+
+https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/135
+
+#### #1077: Add two new status columns and lastupdatedat, plus export - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Service/pull/1077))
+
+- **Changes:** 4 files (+419 / -0)
+- **Created:** Feb 2, 2026
+- **Merged:** Feb 2, 2026
+
+**Description:**
+[CU-86af0hzmh](https://app.clickup.com/t/86af0hzmh)
+
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/471
+
+### WorkUp-Health/WorkUp-BigQuery
+
+#### #151: Add funnel stages for Metrics counts in rediscovery - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/151))
+
+- **Changes:** 4 files (+99 / -4)
+- **Created:** Feb 26, 2026
+- **Merged:** Feb 26, 2026
+
+**Description:**
+[CU-86afkt6yb](https://app.clickup.com/t/86afkt6yb)
+
+#### #149: Compute days open and priority scores for sorting - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/149))
+
+- **Changes:** 3 files (+41 / -3)
+- **Created:** Feb 25, 2026
+- **Merged:** Feb 25, 2026
+
+**Description:**
+[CU-86afkt0rr](https://app.clickup.com/t/86afkt0rr)
+
+#### #148: Add multiple matching score updates - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/148))
+
+- **Changes:** 9 files (+390 / -58)
+- **Created:** Feb 23, 2026
+- **Merged:** Feb 23, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+#### #142: Further segment distance scores - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/142))
+
+- **Changes:** 2 files (+16 / -8)
+- **Created:** Feb 13, 2026
+- **Merged:** Feb 19, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+Segments only 17 possible unique match scores for all users, into 40-50+ unique scores. For example: a 7mi candidate and a 22mi candidate were both scoring 3 before. Now they are significantly different enough to have some separation in the rankings.
+
+#### #140: Add more disqualifications found in comments and reasons - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/140))
+
+- **Changes:** 1 files (+40 / -1)
+- **Created:** Feb 12, 2026
+- **Merged:** Feb 12, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+Some from Scott/Hudson's doc but also many I found in our data and checked for false positives
+
+#### #138: Backfill old Ortto data (pre-Segment) - Adds ~50 hires back to AHS - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/138))
+
+- **Changes:** 2 files (+50 / -0)
+- **Created:** Feb 10, 2026
+- **Merged:** Feb 10, 2026
+
+#### #137: Update priority view tables - especially candidates to engage - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/137))
+
+- **Changes:** 3 files (+272 / -81)
+- **Created:** Feb 10, 2026
+- **Merged:** Feb 10, 2026
+
+**Description:**
+[CU-86af24323](https://app.clickup.com/t86af24323)
+
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/481
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1090
+
+
+<!-- CURSOR_SUMMARY -->
+---
+
+> [!NOTE]
+> **Medium Risk**
+> Changes the selection/classification rules and output schemas for scheduled BigQuery tables, which can materially shift who appears in recruiter queues and requires downstream consumers to handle new/renamed fields.
+> 
+> **Overview**
+> Updates Priority View’s BigQuery pipelines to broaden role coverage and make candidate outreach targeting more precise.
+> 
+> `priority_view_role_stats` now includes **all active opportunities** (not just focus-area matches) and adds an `is_focus_area` boolean to let downstream services prioritize focus roles while still showing other roles.
+> 
+> `priority_view_candidates` expands contact classification to include `favorable_history` and tightens `needs_bump` logic (7–30 day outbound window, excludes candidates who applied after being marked Engaged/Interested). It also adds funnel-mapped application context (via `application_status_funnel_mappings` and `qualified_application_details`), enforces a 12-month recency window for `favorable_history`, and outputs additional columns (last inbound/outbound timestamps and last application details). Documentation in `README.md` is updated to reflect the new definitions, schemas, clustering, and service query pattern.
+> 
+> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 8c58d6ad0e04027c39873be2abe9f74519826ecb. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
+<!-- /CURSOR_SUMMARY -->
+
+#### #135: Add Priority View tables for Roles and Candidates - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/135))
+
+- **Changes:** 4 files (+458 / -0)
+- **Created:** Feb 6, 2026
+- **Merged:** Feb 9, 2026
+
+**Description:**
+[CU-86aey415j](https://app.clickup.com/t/86aey415j)
+
+https://github.com/WorkUp-Health/WorkUp-Admin-Platform/pull/477
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1086
+
+You'll seem some reference to "Candidates To Engage" as well - I've been working on that but need to finish it up and wanted to get this piece up for review separately
+
+#### #132: Remove user import event and add other sms/email to attribution - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-BigQuery/pull/132))
+
+- **Changes:** 1 files (+221 / -136)
+- **Created:** Feb 2, 2026
+- **Merged:** Feb 2, 2026
+
+**Description:**
+[CU-86aeyt31u](https://app.clickup.com/t/86aeyt31u)
+
+Mostly considerably reduces AHS numbers across the board.
+
+Removed:
+- `user_imported`
+
+Added
+- `email_received`
+- `sms_sent`
+
+### WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline
+
+#### #26: Add created_at from Airtable opportunities - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Opp-Matching-Data-Pipeline/pull/26))
+
+- **Changes:** 2 files (+7 / -0)
+- **Created:** Feb 25, 2026
+- **Merged:** Feb 25, 2026
+
+**Description:**
+[CU-86afkt0rr](https://app.clickup.com/t/86afkt0rr)
+
+### WorkUp-Health/WorkUp-Opportunity-Ingestion
+
+#### #71: Small prompt update for Rad Tech vs Rad Assistant - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Opportunity-Ingestion/pull/71))
+
+- **Changes:** 1 files (+5 / -1)
+- **Created:** Feb 24, 2026
+- **Merged:** Feb 24, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+### WorkUp-Health/WorkUp-Postgres
+
+#### #91: Add 'IR Technologist' to career roles - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/pull/91))
+
+- **Changes:** 1 files (+5 / -0)
+- **Created:** Feb 23, 2026
+- **Merged:** Feb 23, 2026
+
+**Description:**
+[CU-86af6a18f](https://app.clickup.com/t/86af6a18f)
+
+Already added to Airtable
+
+#### #89: Add new systems columns for high priority roles and titles (from Airt… - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/pull/89))
+
+- **Changes:** 1 files (+19 / -0)
+- **Created:** Feb 9, 2026
+- **Merged:** Feb 9, 2026
+
+**Description:**
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1086#discussion_r2776148665
+
+#### #87: Add index to event_forms table - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Postgres/pull/87))
+
+- **Changes:** 1 files (+7 / -0)
+- **Created:** Feb 3, 2026
+- **Merged:** Feb 3, 2026
+
+**Description:**
+[CU-86af1202c](https://app.clickup.com/t/)86af1202c)
+
+Found that this table has no index while doing the task. 
+
+### WorkUp-Health/WorkUp-Parser-Magic
+
+#### #40: Update work history specialtyId to be one only - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Parser-Magic/pull/40))
+
+- **Changes:** 1 files (+7 / -2)
+- **Created:** Feb 9, 2026
+- **Merged:** Feb 9, 2026
+
+**Description:**
+[Errors](https://console.cloud.google.com/logs/query;query=severity%3E%3D%22WARNING%22%0A--%20Skip%20errors%20where%20workup%20users%20are%20using%20BigQuery%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20protoPayload.serviceName%3D%22bigquery.googleapis.com%22%0A%20%20%20%20protoPayload.authenticationInfo.principalEmail%3D~%22@workup.health%22%0A%2529%0A--%20Skip%20SendGrid%20errors%20coming%20from%20emailer%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20resource.labels.function_name%3D%22workup-emailer%22%0A%20%20%20%20jsonPayload.message%3D%22Sendgrid%20error%20-%20Bad%20Request%22%0A%2529%0A--%20Skip%20additional%20errors%20related%20to%20SendGrid%20errors%20above%0AAND%20-%2528%0A%20%20%20%20jsonPayload.attemptResponseLog.status%3D%22INVALID_ARGUMENT%22%0A%20%20%20%20resource.labels.queue_id%3D%22email-task%22%0A%2529%0A-jsonPayload.message%3D~%22Sendgrid%20error%22%0A--%20Skip%20general%20task%20error%20logging%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20jsonPayload.@type%3D%22type.googleapis.com%2Fgoogle.cloud.tasks.logging.v1.TaskActivityLog%22%0A%20%20%20%20OR%20%0A%20%20%20%20resource.labels.function_name%3D%22workup-emailer%22%0A%2529%0A--%20Skip%20cloud%20run%20jobs%20error%20logging%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20resource.type%3D%22cloud_run_job%22%0A%2529%0A--%20Skip%20favicon%20endpoint%20404s,%20unneccessary%20%0AAND%20-%2528%0A%20%20%20%20httpRequest.status%3D%22404%22%0A%20%20%20%20httpRequest.requestUrl%3D%22https:%2F%2Fworkup-service-prod-gbp2b6u57q-uc.a.run.app%2Ffavicon.ico%22%0A%2529%0A--%20Skip%20API%20404s%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20jsonPayload.message%3D%22Resource%20not%20found%22%0A%20%20%20%20OR%20%2528%0A%20%20%20%20%20%20%20%20httpRequest.status%3D%22404%22%0A%20%20%20%20%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%22%0A%20%20%20%20%2529%0A%2529%0A--%20Skip%20401%2FUnauthorized%20API%20requests%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20%2528%0A%20%20%20%20%20%20%20%20httpRequest.status%3D%22401%22%0A%20%20%20%20%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%2Fapi%2F%22%0A%20%20%20%20%2529%0A%20%20%20%20OR%20%2528%0A%20%20%20%20%20%20%20%20severity%3E%22WARNING%22%0A%20%20%20%20%20%20%20%20jsonPayload.message%3D~%22auth%2Fid-token-expired%22%0A%20%20%20%20%2529%0A%2529%0A--%20Skip%20user%20409%20errors%20-%20handled%20seperately%0AAND%20-%2528%0A%20%20%20%20httpRequest.status%3D%22409%22%0A%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%2Fapi%2Fusers%22%0A%2529%0AAND%20-%2528%0AtextPayload%3D~%22WARNING:%20Logging%20before%20InitGoogle%5C%2528%5C%2529%20is%20written%20to%20STDERR%22%0A%2529%0A--%20Skip%20Datastream%20PostgreSQL%20-%3E%20BigQuery%20warnings%0AAND%20-%2528%0AtextPayload%3D~%22transaction%20in%20progress%22%0A%2529%0A-jsonPayload.message%3D%22Issue%20getting%20geo%20-%20Cannot%20read%20properties%20of%20null%20%2528reading%20'length'%2529%20TypeError:%20Cannot%20read%20properties%20of%20null%20%2528reading%20'length'%2529%5Cn%20%20%20%20at%20documentValue%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fsearch%2Fdist%2Fcommands%2FSEARCH.js:29:23%2529%5Cn%20%20%20%20at%20Object.transformReply%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fsearch%2Fdist%2Fcommands%2FSEARCH.js:17:61%2529%5Cn%20%20%20%20at%20transformCommandReply%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fclient%2Fdist%2Flib%2Fcommander.js:89:20%2529%5Cn%20%20%20%20at%20Commander.commandsExecutor%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2F@redis%2Fclient%2Fdist%2Flib%2Fclient%2Findex.js:188:54%2529%5Cn%20%20%20%20at%20process.processTicksAndRejections%20%2528node:internal%2Fprocess%2Ftask_queues:95:5%2529%5Cn%20%20%20%20at%20async%20Client.search%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1718:14%2529%5Cn%20%20%20%20at%20async%20Search.callSearch%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1433:23%2529%5Cn%20%20%20%20at%20async%20Search.page%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1321:27%2529%5Cn%20%20%20%20at%20async%20Search.first%20%2528%2Fusr%2Fsrc%2Fapp%2Fnode_modules%2Fredis-om%2Fdist%2Findex.js:1333:25%2529%22%0A--%20Skip%20logs%20related%20to%20user%20import%20endpoints%2Ftasks%0A-%2528%0A%20%20%20%20%2528%0A%20%20%20%20jsonPayload.message%3D~%22User%20import%20-%22%0A%20%20%20%20OR%0A%20%20%20%20jsonPayload.metadata.url%3D~%22%2Fimport-user%22%0A%20%20%20%20%2529%0A%2529%0A-jsonPayload.message%3D%22CSRF%20header%20not%20set%20on%20request%22%0A--%20Do%20not%20include%20email-campaigns%20errors%0A-%2528%0A%20%20%20%20severity%3DERROR%0A%20%20%20%20%2528%0A%20%20%20%20%20%20%20%20jsonPayload.message%3D~%22email-campaigns%2F%22%0A%20%20%20%20%20%20%20%20OR%0A%20%20%20%20%20%20%20%20httpRequest.requestUrl%3D~%22https:%2F%2Fapi.workup.health%2Femail-campaigns%22%0A%20%20%20%20%2529%0A%2529;cursorTimestamp=2026-02-09T15:20:05.790999889Z;startTime=2026-02-09T15:17:19Z;endTime=2026-02-09T15:22:19Z?project=workup-service)
+
+https://github.com/WorkUp-Health/WorkUp-Service/pull/1087
+
+### WorkUp-Health/WorkUp-Scheduled-Jobs
+
+#### #134: Exclude new apply flow events from Event Recap email - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/pull/134))
+
+- **Changes:** 2 files (+28 / -2)
+- **Created:** Feb 3, 2026
+- **Merged:** Feb 3, 2026
+
+**Description:**
+[CU-86af1202c](https://app.clickup.com/t/86af1202c)
+
+#### #133: Add phone, name, email validations for create users job - ✅ merged ([link](https://github.com/WorkUp-Health/WorkUp-Scheduled-Jobs/pull/133))
+
+- **Changes:** 4 files (+179 / -16)
+- **Created:** Feb 2, 2026
+- **Merged:** Feb 3, 2026
+
+**Description:**
+[CU-86aez7wbw](https://app.clickup.com/t/86aez7wbw)
+
+## ✅ ClickUp Tasks (17 total)
+
+### complete (10)
+
+#### Skip event recap email for metlife(/events with postgres configs) ([link](https://app.clickup.com/t/86af1202c))
+
+- **Folder:** Sprints
+- **List:** Sprint 28 (1/25 - 2/7)
+- **Created:** Feb 2, 2026
+- **Updated:** Feb 5, 2026
+- **Closed:** Feb 5, 2026
+
+#### Add last updated at and phase to recent activity reporting views ([link](https://app.clickup.com/t/86af0hzmh))
+
+- **Folder:** Sprints
+- **List:** Sprint 28 (1/25 - 2/7)
+- **Created:** Feb 2, 2026
+- **Updated:** Feb 3, 2026
+- **Closed:** Feb 3, 2026
+
+Last updated timestamp should hopefully be straight fwd for all  
+Phase for GoodVets reporting is a field called Stage. See sheets:  
+Don't worry as much about other partners. Can display duplicative data
+
+#### Ensure we validate phone number format before writing to user account in user creation job triggered by past applicant data ([link](https://app.clickup.com/t/86aez7wbw))
+
+- **Folder:** Sprints
+- **List:** Sprint 28 (1/25 - 2/7)
+- **Created:** Jan 30, 2026
+- **Updated:** Feb 5, 2026
+- **Closed:** Feb 5, 2026
+
+#### Incorporate email & SMS events into reporting ([link](https://app.clickup.com/t/86aeyt31u))
+
+- **Folder:** Sprints
+- **List:** Sprint 28 (1/25 - 2/7)
+- **Created:** Jan 30, 2026
+- **Updated:** Feb 3, 2026
+- **Closed:** Feb 3, 2026
+
+Stop relying exclusively on imported events now that we are moving to CIO
+
+#### Add the ability to capture walk-ins/add candidates to events ([link](https://app.clickup.com/t/86aejarv4))
+
+- **Folder:** Sprints
+- **List:** Sprint 28 (1/25 - 2/7)
+- **Created:** Jan 15, 2026
+- **Updated:** Feb 5, 2026
+- **Closed:** Feb 5, 2026
+
+Background
+For events, especially those with pre-registration like MetLife, AHS/customers often have walk-ins or people that show up. As a result, we want to make sure we give them the ability to add candidates.
+
+Acceptance Criteria
+With this task, users should:
+Show a button in the top right corner of an event to "Add Candidate"
+When a user clicks that button, a pop-up is shown to enter their email address
+When a user "searches" for that email address, we either display their info pre-populated or don't (see screenshots)
+When a user is completing their info, they should have the option to mark them as attended (default to checked)
+When submitting, this candidate should be displayed in the table as a full registrant
+
+Designs
+See attached or prototype here - meant to be illustrative
+
+#### Data Pull For Scott ([link](https://app.clickup.com/t/86afae6b0))
+
+- **Folder:** Sprints
+- **List:** Sprint 29 (2/8 - 2/21)
+- **Created:** Feb 11, 2026
+- **Updated:** Feb 12, 2026
+- **Closed:** Feb 12, 2026
+
+"Morning - question for you that maybe you can help me with. If I wanted to take inventory of how well were doing recently with NY Cancer but look at it as a funnel (e.g. in January we engaged (sent email/sms) 500 candidates of those 100 applied, 40 were interviewed, 5 were hired - everything beyond engagement can happen in Jan or Feb), what's the best way for me to pull that data? Here's the spreadsheet I started:
+
+
+If I export the recent activity, the workup date = engagement date (right?), applied date is when they applied but is these a way to see who interviews? And if I wanted to pull in engagement (email received + sms sent) and replies is app-data-collection-398213.admin_dashboard.candidate_activities the best place to pull that?
+
+In ideal world I could also pull in the deactivation date for the req and reason_name from the application to help understand why our candidates are getting rejected (eg most jobs are getting closed too soon or most candidates are “others more qualified”)"
+
+#### Backfill email received and sms sent events ([link](https://app.clickup.com/t/86af93xpn))
+
+- **Folder:** Sprints
+- **List:** Sprint 29 (2/8 - 2/21)
+- **Tags:** reporting
+- **Created:** Feb 10, 2026
+- **Updated:** Feb 12, 2026
+- **Closed:** Feb 12, 2026
+
+Background
+There's a chance we are missing some candidates from earlier in 2025 and 2024 that resulted in outcomes for AHS in particular now that we are relying on comms related events instead of imported events. As a result, I want to backfill just the sent/received events at a minimum to make sure we are properly getting credit for these.
+
+Acceptance Criteria
+At the conclusion of this ticket, we should be backfilling candidates that have a Received Email or SMS Sent event associated with their profile and showing in the Activity feed. The historical data can be found here:
+
+#### Expose top match tab to all users in WorkUp ([link](https://app.clickup.com/t/86af8qd59))
+
+- **Folder:** Sprints
+- **List:** Sprint 29 (2/8 - 2/21)
+- **Created:** Feb 10, 2026
+- **Updated:** Feb 12, 2026
+- **Closed:** Feb 12, 2026
+- **Due:** Feb 16, 2026
+
+#### WorkUp should surface candidates to focus on today ([link](https://app.clickup.com/t/86af24323))
+
+- **Folder:** Sprints
+- **List:** Sprint 29 (2/8 - 2/21)
+- **Created:** Feb 3, 2026
+- **Updated:** Feb 12, 2026
+- **Closed:** Feb 12, 2026
+
+Some rules for who and what should be surfaced:
+System (or user) specific focus areas (e.g. NY Cancer is MAs, Head Nurse, Receptionist)
+Recently applied to roles that were closed and their status indicates they could be re-routed (aka favorable outcomes from other role - e.g. Screen, Interview, Others More Qualified w/ Notification, Consider for Future Role)
+Candidates that were recently engaged/interested, but didn't take a next step (e.g. reply back to us or apply to a job)
+Should probably include a level of qualification matching
+Recommend role to promote to them
+Ability to trigger comms
+Remove from queue once comms is initiatied
+
+Design
+
+#### WorkUp should surface roles to focus on today ([link](https://app.clickup.com/t/86aey415j))
+
+- **Folder:** Sprints
+- **List:** Sprint 29 (2/8 - 2/21)
+- **Created:** Jan 29, 2026
+- **Updated:** Feb 12, 2026
+- **Closed:** Feb 12, 2026
+
+Add system config for role/opportunity focus areas
+NY Cancer: Medical Assistant, Nurse Manager
+GoodVets: New Grad Vets, PCR IIs
+AHS: Social Worker/Behavioral Health, Radiographer, Respiratory Therapists
+The roles shown should be a combination of
+Newest - posted within the last 10 days
+Oldest that need help - combo of days open and limited applicant volume (<10) over the last 30 days
+
+### ready for release (6)
+
+#### Update priority view -> candidates default filters ([link](https://app.clickup.com/t/86afkttb4))
+
+- **Folder:** Sprints
+- **List:** Sprint 30 (2/22 - 3/7)
+- **Created:** Feb 20, 2026
+- **Updated:** Feb 27, 2026
+
+When a user clicks “ENGAGE  CANDIDATES” they are taken to a view of the candidates/rediscovery page with filters applied: 
+Distance from Opportunity within 10 miles
+Overall match score >= 7
+Email/SMS not received within last 30 days
+
+#### Add metrics to rediscovery roles ([link](https://app.clickup.com/t/86afkt6yb))
+
+- **Folder:** Sprints
+- **List:** Sprint 30 (2/22 - 3/7)
+- **Created:** Feb 20, 2026
+- **Updated:** Feb 27, 2026
+
+Add count of applied in last 30d, how many new, and how many interviewing
+Add count for how many priority matches there are 
+Open question: What is defined as new?
+
+#### Add metrics to top of rediscovery page ([link](https://app.clickup.com/t/86afkt654))
+
+- **Folder:** Sprints
+- **List:** Sprint 30 (2/22 - 3/7)
+- **Created:** Feb 20, 2026
+- **Updated:** Feb 27, 2026
+
+Add metrics bar with 3 buckets:
+Roles: filtered number out of total
+Priority matches: filtered priority matches out of total candidate “matches”
+Estimated impact: 8% of filtered priority matches = qualified applicants
+
+#### Move priority roles ordering to rediscovery page ([link](https://app.clickup.com/t/86afkt0rr))
+
+- **Folder:** Sprints
+- **List:** Sprint 30 (2/22 - 3/7)
+- **Created:** Feb 20, 2026
+- **Updated:** Feb 27, 2026
+
+We want to combine the rediscovery page with the priority view page. Meaning, our logic to determine priority roles should influence the order the roles shown in rediscovery with the following additional features:
+Remove the priority roles from always influencing priority. They should instead of be the default roles filters set in the rediscovery filters. These filters should be sticky only for the session. "Roles are sorted in “relevance” order which is a combination of oldest req (25%), low applicant volume (25%), and volume of matches (50%) (aka “To Review” filters)"
+Add sorting ability that is sorted by our priority ordering to start by default. Then, add oldest → newest and newest→ oldest options.
+
+#### Automated processing of Greenhouse email (GoodVets) ([link](https://app.clickup.com/t/86afkgtnu))
+
+- **Folder:** Sprints
+- **List:** Sprint 30 (2/22 - 3/7)
+- **Created:** Feb 20, 2026
+- **Updated:** Feb 24, 2026
+
+#### Improve our matching of candidates as fits for roles ([link](https://app.clickup.com/t/86af6a18f))
+
+- **Folder:** Sprints
+- **List:** Sprint 30 (2/22 - 3/7)
+- **Created:** Feb 7, 2026
+- **Updated:** Feb 24, 2026
+
+Acceptance Criteria
+Scenarios where we are currently seeing candidates being matched to roles that aren't good fits:
+
+BB Notes for what was done:
+  Scoring improvements (BQ SQL):
+  - 8-bucket location scoring (was 4 coarse buckets) — better differentiation within 25mi
+  - 8-bucket warmth float (was 4 integer) — splits the 72% mega-bucket by recency
+  - Rejection penalty based on rate/count (-0.25/-0.15/-0.10)
+  - Overall score formula rewrite for the buckets above with 0.6-10.0 clamping
+  - Specialty matching bonus (+0.5 when candidate specialty matches opportunity)
+  - 44 new career role aliases for better Tier 4 role inference
+
+  Structural fixes (BQ SQL):
+  - First-label role inference replacing CROSS JOIN UNNEST (fixes multi-label contamination for 41.7K users)
+  - Rejection + specialty folded into qualifications term for proper weighting
+  - Last-application tiebreaker, specialty case sensitivity, specialty_id FK
+
+  UI/Service fixes:
+  - Fixed sorting bug causing 419K rows to sort as lowest-priority (Service)
+  - Added candidateStatus filter (is/is not) to Rediscovery and Candidates pages
+  - Default Rediscovery filters: exclude Not Interested + Took Role Elsewhere
+  - Aligned Priority View filters with FilterSummaryCard system (6.3 "Good" threshold)
+
+  Data fixes:
+  - 117 disqualification patterns (was 81) — 3 rounds of additions + FP audit
+  - SMS STOP reply filtering from engagement scores
+  - IR Technologist career role created + 29 opps reprocessed
+  - Career preferences set for 6 complaint candidates
+  - 4 Radiology Assistant opps reclassified (were mislabeled as Rad Tech)
+  - Bulk reprocessing: all active opps (3 systems) + 11,337 inactive AHS opps
+
+  Complaint resolution: 27/34 named candidates resolved (79%). Remaining 5 are internal employee detection (deferred to product scoping) + 2 partial improvements.
+
+### ready for development (1)
+
+#### general ui cleanup from designs ([link](https://app.clickup.com/t/86afktq2a))
+
+- **Folder:** Sprints
+- **List:** Sprint 30 (2/22 - 3/7)
+- **Created:** Feb 20, 2026
+- **Updated:** Feb 26, 2026
+
+Clean things up a bit where we see opportunity from designs  (to define further)
+
+Other filters now in the prototype that weren't in any other stories: Speciality , Req Id  and Job Title  (with a "contains" option also)
+
+---
+
+*End of Achievement Collection Report*
+
+**Next Steps:**
+1. Copy this entire document
+2. Open Claude.ai or ChatGPT
+3. Paste this document along with your existing journal
+4. Use the suggested prompt above to merge and summarize
+5. Save the updated journal

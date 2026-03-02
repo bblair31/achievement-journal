@@ -234,7 +234,6 @@ export const collectNotionActivity = async (token, config, startDate, endDate) =
 
     return { pages: formatted };
   } catch (error) {
-    console.error('Failed to collect Notion data:', error.message);
-    return { pages: [] };
+    throw new Error(`Failed to collect Notion data: ${error.message}`);
   }
 };

@@ -199,8 +199,7 @@ const getPullRequests = async (request, username, startDate, endDate, config) =>
     const prDetails = await Promise.all(prDetailsPromises);
     return prDetails.filter(Boolean);
   } catch (error) {
-    console.error('Failed to fetch pull requests:', error.message);
-    return [];
+    throw new Error(`Failed to fetch pull requests: ${error.message}`);
   }
 };
 
@@ -234,8 +233,7 @@ const getIssues = async (request, username, startDate, endDate, config) => {
 
     return result.items.map(formatIssue);
   } catch (error) {
-    console.error('Failed to fetch issues:', error.message);
-    return [];
+    throw new Error(`Failed to fetch issues: ${error.message}`);
   }
 };
 

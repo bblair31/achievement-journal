@@ -130,9 +130,9 @@ const ensureOutputDir = async (dir) => {
 /**
  * Generate output filename with timestamp
  */
-const generateFilename = (pattern) => {
-  const timestamp = new Date().toISOString().split('T')[0];
-  return `${pattern}-${timestamp}.md`;
+const generateFilename = (pattern, startDate, endDate) => {
+  const toDateString = (date) => date.toISOString().split('T')[0];
+  return `${pattern}-${toDateString(startDate)}-to-${toDateString(endDate)}.md`;
 };
 
 /**
@@ -197,7 +197,7 @@ const main = async () => {
     const markdown = generateMarkdown(config.output, data, startDate, endDate);
 
     // Save to file
-    const filename = generateFilename(config.output.filePattern);
+    const filename = generateFilename(config.output.filePattern, startDate, endDate);
     const filepath = await saveMarkdown(config.output.directory, filename, markdown);
 
     console.log(`\n✅ Report saved to: ${filepath}`);

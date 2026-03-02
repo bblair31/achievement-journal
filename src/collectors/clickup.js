@@ -246,7 +246,6 @@ export const collectClickUpActivity = async (token, config, startDate, endDate) 
 
     return { tasks: filteredTasks };
   } catch (error) {
-    console.error('Failed to collect ClickUp data:', error.message);
-    return { tasks: [] };
+    throw new Error(`Failed to collect ClickUp data: ${error.message}`);
   }
 };

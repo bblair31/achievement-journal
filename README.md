@@ -134,27 +134,86 @@ npm run collect -- --period quarter
 
 1. Open the generated markdown file in `output/achievements-YYYY-MM-DD.md`
 
-2. Copy the entire contents
+2. Open Claude.ai (recommended)
 
-3. Open Claude.ai (recommended) or ChatGPT
+3. Paste the report into the conversation
 
-4. Paste the report along with your existing journal
+4. Attach or paste your existing achievement journal
 
-5. Use the suggested prompt in the report (or customize it):
+5. Optionally attach your resume/CV — even an old or incomplete one helps Claude understand your role, seniority, and how to frame achievements
+
+6. Use the suggested prompt in the report (or customize it):
    ```
-   I have two documents:
-   1. My existing achievement journal (paste below)
-   2. Raw activity data from the past period (already pasted above)
+   You are a professional writer helping me maintain my career achievement journal.
+   Your goal is to synthesize raw activity data into polished, results-oriented
+   journal entries that match the voice and style of my existing journal.
 
-   Please help me:
-   - Review the raw activities and identify significant accomplishments
-   - Group related activities into broader achievements
-   - Merge these new achievements into my existing journal
-   - Update any ongoing projects that have made progress
-   - Maintain chronological order and consistent formatting
+   I'm providing the following documents:
+
+   <documents>
+     <document index="1">
+       <source>resume (optional — for role context)</source>
+       <document_content>
+         [Paste your resume/CV here, or remove this section]
+       </document_content>
+     </document>
+     <document index="2">
+       <source>existing achievement journal</source>
+       <document_content>
+         [Paste your current journal here]
+       </document_content>
+     </document>
+     <document index="3">
+       <source>raw activity data (this report)</source>
+       <document_content>
+         [Already pasted above, or paste the report contents here]
+       </document_content>
+     </document>
+   </documents>
+
+   Step 1 — Identify key achievements:
+   First, review the raw activity data and list the 5-10 most significant
+   accomplishments in <key_achievements> tags. Group related activities together
+   (e.g., multiple commits on the same feature = one achievement). Prioritize
+   work that demonstrates impact, technical depth, or leadership.
+
+   Step 2 — Merge into my journal:
+   Using the key achievements you identified, merge them into my existing journal.
+   For each entry:
+   - Write in first person, past tense
+   - Lead with the result or impact, not the task
+   - Include relevant technical details and metrics where available
+   - Match the tone and formatting of my existing journal entries
+   - Note the date or time period
+
+   Step 3 — Verify:
+   Before finishing, confirm that:
+   - No significant accomplishments from the raw data were overlooked
+   - Entries are in chronological order
+   - The voice is consistent with my existing journal
+   - Achievements are framed for performance reviews and career growth
+
+   Step 4 — Surface metrics and impact (interactive):
+   After presenting the merged journal, review each entry and identify where
+   quantifiable impact would strengthen it. Then ask me targeted questions to
+   help surface those numbers. For each entry that could benefit:
+   - Suggest the specific type of metric that would make it stronger
+     (e.g., users affected, time saved, performance improvement, revenue impact,
+     error reduction, team size, adoption rate)
+   - Ask where I might find the data (monitoring dashboards, PR descriptions,
+     analytics tools, stakeholder conversations, release notes)
+   - If I don't have exact numbers, help me estimate reasonable ranges or
+     reframe the impact qualitatively (e.g., "reduced from minutes to seconds"
+     or "adopted by the entire engineering team")
+
+   This is a conversation — keep asking follow-up questions until we've
+   strengthened the entries that matter most. Not every entry needs a metric,
+   so focus on the achievements with the highest career impact.
    ```
 
-6. Review the AI's output and save your updated journal
+7. Have a back-and-forth conversation about metrics — Claude will ask you targeted questions to help quantify your impact and suggest where to find the data
+
+8. Review the final output and save your updated journal
 
 ### Manual GitHub Actions Trigger
 
